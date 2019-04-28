@@ -14,15 +14,15 @@
     body {
         height: 100vh;
         background-color: red;
-        background-image: linear-gradient(to right, red, orange, yellow, orange, red);
+        background-image: linear-gradient(to right, black, #3a9eea, black);
     }
     #box  {
-        border: 2pt solid black;
-        border-radius: 20px;
-        min-width: 1000px;
-        max-width: 1000px;
-        background-image: url("/images/header/Space.png");
         position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border-bottom: 1pt gray dashed;
+        background-color: black;
         top: 0;
     }
     #center {
@@ -34,15 +34,17 @@
     .container {
         max-width: 1000px;
         height: 100vh;
+        margin: 0 auto;
     }
     #footer {
-       position: fixed;
-       bottom: 0;
-       margin: auto;
-       width: 1000px;
-       border-radius: 10px;
-       background-color: black;
-       text-align: center; 
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        border-top: 1pt gray dashed;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
     }
     .nav {
         margin: 0 auto;
@@ -106,7 +108,7 @@
         text-align: center;
         height: 100vh;
         border: 2pt solid black;
-        background-image: linear-gradient(to right, black, gray, black);
+        background-color: #444444;
         padding-top: 20%;
         padding-left: 5%;
         padding-right: 5%;
