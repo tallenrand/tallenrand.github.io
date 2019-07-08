@@ -34,7 +34,7 @@
         border: 2pt black solid;
     }
     .container {
-        max-width: 1600px;
+        max-width: 2000px;
         min-width: 400px;
         height: 100vh;
         margin: 0 auto;
@@ -45,7 +45,6 @@
         bottom: 0;
         border-top: 1pt gray dashed;
         width: 100%;
-
         background-color: black;
         color: white;
         text-align: center;
@@ -54,11 +53,12 @@
         margin: 0 auto;
         text-align: center;
         border: 0pt white solid;
-        width: 370px;
+        width: 274px;
         border-radius: 20px;
     }
     .nav a {
         text-align: center;
+        font-size: 16px;
         padding: 10px;
         width: 90px;
         height: 40px;
@@ -80,9 +80,26 @@
         background: gray;
         color: black;
     }
-    a {
+    #link:link, #link:visited {
         font-family: 'Poppins', sans-serif;
         text-align: center;
+        width: 260px;
+        font-size: 24px;
+        background-color: #337AB7;
+        color: white;
+        padding: 10px;
+        margin: 2px;
+        display: inline-block;
+        border-radius: 4px;
+    }
+    #link:hover {
+        text-align: center;
+        width: 260px;
+        border: 0pt solid black;
+        background: #c1c1c1;
+        color: black;
+        display: inline-block;
+        text-decoration: none;
     }
     h1 {
         font-family: 'Poppins', sans-serif;
@@ -93,20 +110,22 @@
     h2 {
         font-family: 'Poppins', sans-serif;
         text-align: center;
-        font-size: 24px;
+        font-size: 36px;
         color: white;
     }
     h3 {
         font-family: 'Poppins', sans-serif;
         text-align: center;
-        font-size: 26px;
+        font-size: 30px;
         color: white;
     }
     p {
         font-family: 'Poppins', sans-serif;
-        text-align: center;
-        font-size: 14px;
+        text-align: justify;
+        font-size: 20px;
         color: white;
+        margin-left: 6%;
+        margin-right: 6%;
     }
     .tab-content {
         max-width: 1500px;
@@ -116,7 +135,8 @@
         height: 100vh;
         border: 2pt solid black;
         background-color: #444444;
-        padding-top: 20%;
+        padding-top: 140px;
+        padding-bottom: 140px;
         padding-left: 5%;
         padding-right: 5%;
         overflow: scroll;
@@ -128,19 +148,66 @@
 <div class="container">
     <div id="box">
         <h1>Tallen Rand</h1>
-        
-        <ul class="nav nav-pills">
-          <li class="active"><a data-toggle="pill" href="#home">Portfolio</a></li>
-          <li><a data-toggle="pill" href="#menu1">Menu 1</a></li>
-          <li><a data-toggle="pill" href="#menu2">Menu 2</a></li>
-          <li><a data-toggle="pill" href="#menu3">Menu 3</a></li>
-        </ul>
+            <ul class="nav nav-pills">
+                <li class="active"><a data-toggle="pill" href="#code">Code!</a></li>
+                <li><a data-toggle="pill" href="#portfolio">Portfolio</a></li>
+                <li><a data-toggle="pill" href="#about">About</a></li>
+            </ul>
         <br>       
     </div>
 
+
         <div class="tab-content">
-          <div id="home" class="tab-pane fade in active">
-            <h3>PORTFOLIO</h3>
+          <div id="code" class="tab-pane fade in active">
+            <h2>Coding for Teachers</h2>
+            <br>
+            <p>This page will serve as a list of resources that teachers can use to promote the use of technology in the classroom. Currently, I am writing
+                a Udemy course that will detail everything I've done as a 5th grade teacher to teach my students how to code and create art with computers.
+                Once my course is complete I will share a link to it on this page.
+            </p>
+            <br>
+            <h3>1) Teach your students how to type</h3>
+            <p>I've found that it's not wise to assume your students have been taught how to type. Use the following free resources to get your students typing quickly:</p>
+            <a id="link" href="https://www.typingclub.com" target="_blank">Typing Club</a>
+            <a id="link" href="https://www.10fastfingers.com" target="_blank">10fastfingers.com</a>
+            <a id="link" href="https://www.google.com/docs/about/" target="_blank">Google Docs</a>
+            <br><br>
+            <h3>2) Teach your students how to code</h3>
+            <p>The links below are great for all students, whether they have zero coding knowledge or have been coding for years:</p>
+            <a id="link" href="https://www.scratch.mit.edu" target="_blank">scratch.mit.edu</a>
+            <a id="link" href="https://www.codepen.io" target="_blank">codepen.io</a>
+            <a id="link" href="https://www.freecodecamp.org" target="_blank">freeCodeCamp.org</a>
+            <br><br>
+            <h3>3) Create awesome computer art</h3>
+            <p>I found that many of my students were very interested in using computers to create art, so I started an after-school program called <i>Blender Club</i>.
+            The following software is industry-level and available completely free, so it is perfect for students wishing to become animators, game developers, or graphic designers:</p>
+            <a id="link" href="https://www.blender.org" target="_blank">blender.org</a>
+            <a id="link" href="https://inkscape.org" target="_blank">inkscape.org</a>
+            <a id="link" href="https://www.gimp.org" target="_blank">gimp.org</a>
+            <br><br>
+            <h3>4) Refurbish old computers</h3>
+            <p>After speaking to my schools' IT manager, I found that there were tons of old computers sitting around, waiting to be trashed. The IT manager gave me
+                as many computers and computer parts that I wanted, so I had my students take them apart and replace any parts that weren't working. My students were amazed at how
+                easy it was to fix computers, so I found it to be a great learning experience. We installed various versions of Linux on various machines and created our own computer
+                lab in the back of the classroom. The versions of Linux, also known as <i>distros</i>, are freely available and are a great free alternative to other paid operating
+                systems:
+            </p>
+            <a id="link" href="https://linuxmint.com/download.php" target="_blank">Linux Mint</a>
+            <a id="link" href="https://ubuntu.com/download/desktop" target="_blank">Ubuntu</a>
+            <a id="link" href="https://www.raspberrypi.org/downloads/noobs/" target="_blank">NOOBS</a>
+            <h3>5) Game Development</h3>
+            <p>If your school has access to high-end computers, there are some great, free programs that allow your students to develop their own apps and games:
+            </p>
+            <a id="link" href="https://www.autodesk.com/education/free-software/maya" target="_blank">Maya</a>
+            <a id="link" href="https://www.unrealengine.com/en-US/download" target="_blank">Unreal Engine 4</a>
+            <a id="link" href="https://unity3d.com/get-unity/download" target="_blank">Unity</a>
+            <a id="link" href="https://developer.android.com/studio/index.html" target="_blank">Android Studio</a>
+            <a id="link" href="https://coronalabs.com/" target="_blank">Corona</a>
+          </div>
+
+
+          <div id="portfolio" class="tab-pane fade">
+            <h3>Portfolio</h3>
             <p class="codepen" data-height="613" data-theme-id="0" data-default-tab="result" data-user="tkrand" data-slug-hash="dmyXbe" style="height: 613px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Small Quote Machine">
                 <span>See the Pen <a href="https://codepen.io/tkrand/pen/dmyXbe/">
                 Small Quote Machine</a> by Tallen Rand (<a href="https://codepen.io/tkrand">@tkrand</a>)
@@ -148,17 +215,11 @@
               </p>
               <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
           </div>
-          <div id="menu1" class="tab-pane fade">
-            <h3>Menu 1</h3>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-          <div id="menu2" class="tab-pane fade">
+
+
+          <div id="about" class="tab-pane fade">
             <h3>Menu 2</h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-          </div>
-          <div id="menu3" class="tab-pane fade">
-            <h3>Menu 3</h3>
-            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
           </div>
         </div>
 
