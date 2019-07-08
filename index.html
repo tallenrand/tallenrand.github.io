@@ -9,7 +9,7 @@
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
             <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
             <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
- 
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
 <body> 
 <style>
@@ -26,6 +26,39 @@
         border-bottom: 1pt gray dashed;
         background-color: black;
         top: 0;
+    }
+    .button {
+        width: 50px;
+        height: 30px;
+        border-radius: 20px;
+        margin-left: 2px;
+        margin-right: 2px;
+        outline: none;
+        border: 1.5pt solid black;
+        background-color: #337AB7;
+        box-shadow: -1px 1px 4px white;
+    }
+    .button:hover {
+        width: 50px;
+        height: 30px;
+        border-radius: 20px;
+        margin-left: 2px;
+        margin-right: 2px;
+        outline: none;
+        border: 1.5pt solid black;
+        background-color: gray;
+        box-shadow: -1px 1px 4px white;
+    }
+    .button:active {
+        width: 50px;
+        height: 30px;
+        border-radius: 20px;
+        margin-left: 2px;
+        margin-right: 2px;
+        outline: none;
+        border: 1.5pt solid black;
+        background-color: darkslategray;
+        box-shadow: -1px 1px 4px white;
     }
     #center {
         margin: 0 auto;
@@ -51,6 +84,8 @@
         background-color: black;
         color: white;
         text-align: center;
+        height: 50px;
+        padding: 8px;
     }
     .nav {
         margin: 0 auto;
@@ -316,9 +351,9 @@
         </div>
 
         <div id="footer">
-            <h3>Tallen Rand</h3>
-            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-
+            <button class="button" onClick="window.open('https://github.com/tallenrand')"><i class="fa fa-github" style="font-size:24px"></i></button>
+            <button class="button" onClick="window.open('https://www.freecodecamp.com/tallenrand')"><i class="fa fa-free-code-camp" style="font-size:24px"></i></button>
+            <button class="button" onClick="window.open('https://www.linkedin.com/in/tallen-rand/')"><i class="fa fa-linkedin" style="font-size:24px"></i></button>
         </div>
         
 </div>
