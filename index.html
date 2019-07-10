@@ -27,7 +27,7 @@
         border-bottom: 1pt gray dashed;
         background-color: black;
         top: 0;
-        z-index: 100;
+        z-index: 500;
     }
     .button {
         width: 50px;
@@ -85,7 +85,7 @@
         text-align: center;
         height: 56px;
         padding: 8px;
-        z-index: 100;
+        z-index: 500;
     }
     .nav {
         margin: 0 auto;
@@ -121,7 +121,7 @@
         color: black;
     }
     #link:link, #link:visited {
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Libre Baskerville', serif;
         text-align: center;
         width: 260px;
         font-size: 24px;
@@ -133,6 +133,7 @@
         border-radius: 4px;
     }
     #link:hover {
+        font-family: 'Libre Baskerville', serif;
         text-align: center;
         width: 260px;
         border: 0pt solid black;
@@ -199,27 +200,33 @@
         overflow: auto;
         scrollbar-width: thin;
     }
-    #thumbnail {
+    #thumbnail, #thumbnail2, #thumbnail3, #thumbnail4, #thumbnail5 {
         width: 700px;
         height: 394px;
         margin: 0 auto;
         z-index: -1;
     }
-    #ytbox {
+    #ytbox, #ytbox2, #ytbox3, #ytbox4, #ytbox5 {
         margin: 0 auto;
-    }
-    #ytpic {
+        width: 700px;
+        height: 394px;
         position: relative;
+    }
+    #ytpic, #ytpic2, #ytpic3, #ytpic4, #ytpic5 {
+        position: absolute;
         z-index: 3;
         display: block;
+        width: 100%;
+        height: 100%;
     }
-    #ytpic:hover {
-        opacity: 0;
+    #ytpic:hover, #ytpic2:hover, #ytpic3:hover, #ytpic4:hover, #ytpic5:hover {
+        filter: brightness(50%);
     }
-    #ytvid {
-        position: relative;
+    #ytvid, #ytvid2, #ytvid3, #ytvid4, #ytvid5{
+        position: absolute;
         z-index: 2;
-        margin-top: -394px;
+        width: 100%;
+        height: 100%;
     }
 
 </style>
@@ -277,13 +284,21 @@
             <a id="link" href="https://www.raspberrypi.org/downloads/noobs/" target="_blank">NOOBS</a>
             <br><br>
             <h3>5) Game Development</h3>
-            <p>If your school has access to high-end computers, there are some great, free programs that allow your students to develop their own apps and games:
+            <p>If your school has access to high-end computers, there are some great, free programs that allow your students to develop their own apps and games (some 
+                of these only offer free student editions):
             </p>
             <a id="link" href="https://www.autodesk.com/education/free-software/maya" target="_blank">Maya</a>
             <a id="link" href="https://www.unrealengine.com/en-US/download" target="_blank">Unreal Engine 4</a>
             <a id="link" href="https://unity3d.com/get-unity/download" target="_blank">Unity</a>
             <a id="link" href="https://developer.android.com/studio/index.html" target="_blank">Android Studio</a>
             <a id="link" href="https://coronalabs.com/" target="_blank">Corona</a>
+            <br><br>
+            <h3>6) Free Repositories for Developers</h3>
+            <p>If you haven't used Github or Bitbucket (or any other site offering free repositories, for that matter), then I highly recommend you
+                start now. In my elementary school classroom, we only used these to host images, but beginners can easily do much more than that, especially if Github is combined with Github Desktop.
+            </p>
+            <a id="link" href="https://github.com/" target="_blank">Github</a>
+            <a id="link" href="https://bitbucket.org/product" target="_blank">Bitbucket</a>
             <br><br><br>
             <h3>--------------------------------------------------</h3>
           </div>
@@ -307,18 +322,17 @@
                 <p>I made this Random Quote Generator in Codepen using HTML, CSS, and JavaScript to fulfill a coding challenge for freeCodeCamp.org.</p>
                 <br><p1>----------</p1><br><br>
             
+
             <div id="ytbox">
                 <div id="ytpic">
-                    <a id="hoverPic" href="https://www.youtube.com/embed/hcPxYXr-OuU" autoplay="true"><img id="thumbnail" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/GNN.PNG?raw=true"></a>
+                    <a id="hoverPic" href="#"><img id="thumbnail" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/GNN.PNG?raw=true"></a>
                 </div>
-
                 <div id="ytvid">
-                    <iframe width="700" height="394" src="https://www.youtube.com/embed/hcPxYXr-OuU" 
+                    <iframe id="ytvideo" width="100%" height="100%" src="https://www.youtube.com/embed/hcPxYXr-OuU?rel=0" 
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
                 </div>
             </div>
-
                 <p1><i>-Goodbye, Net Neutrality-</i></p1>
                 <br><br>
                 <p>I made this short game using Blender and Unreal Engine 4, shortly after Ajit Pai illegally killed net neutrality in 2017.</p>
@@ -327,9 +341,17 @@
                 <a id="link" href="https://randocalrissian.itch.io/goodbye-net-neutrality" target="_blank">GNN - itch.io</a>
                 <br><br><p1>----------</p1><br><br>
             
-                <a id="hoverPic" href="https://www.youtube.com/embed/bCf53v5oaU8"><img id="thumbnail" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/BF.PNG?raw=true"></a>
-                <!--<iframe width="100%" height="394" src="https://www.youtube.com/embed/bCf53v5oaU8"
-                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+
+
+            <div id="ytbox2">
+                <div id="ytpic2">
+                    <a id="hoverPic2" href="#"><img id="thumbnail2" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/BF.PNG?raw=true"></a>
+                </div>
+                <div id="ytvid2">
+                    <iframe id="ytvideo2" width="100%" height="100%" src="https://www.youtube.com/embed/bCf53v5oaU8?rel=0"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
                 <p1><i>-Budget Friend-</i></p1>
                 <br><br>
                 <p>My wife and I made this Android app using Android Studio, Adobe Photoshop, and Adobe Illustrator.</p>
@@ -337,6 +359,7 @@
                 <p1>Download it for $1.99 on Google Play:</p1>
                 <a id="link" href="https://play.google.com/store/apps/details?id=com.tallen.sqliteexample&hl=en_US" target="_blank">Budget Friend</a>
                 <br><br><p1>----------</p1><br><br>
+
 
                 <p1 class="codepen" data-height="457" data-theme-id="0" data-default-tab="result" data-user="tkrand" data-slug-hash="NwOyzr"
                 style="height: 457px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;
@@ -348,12 +371,19 @@
               <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
               <p1><i>-JavaScript Calculator-</i></p1>
                 <br><br>
-              <p>I made this JavaScript Calculator using HTML, CSS, and JavaScript to fulfill a coding challenge for freeCodeCamp.org.</p>
+              <p>I made this JavaScript Calculator in Codepen using HTML, CSS, and JavaScript to fulfill a coding challenge for freeCodeCamp.org.</p>
               <br><p1>----------</p1><br><br>
 
-              <a id="hoverPic" href="https://www.youtube.com/embed/UMadonih5Tw"><img id="thumbnail" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/BlenderClub.PNG?raw=true"></a>
-              <!--<iframe width="100%" height="394" src="https://www.youtube.com/embed/UMadonih5Tw"
-              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+
+              <div id="ytbox3">
+                    <div id="ytpic3">
+                        <a id="hoverPic3" href="#"><img id="thumbnail3" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/BlenderClub.PNG?raw=true"></a>
+                    </div>
+                    <div id="ytvid3">
+                            <iframe id="ytvideo3" width="100%" height="100%" src="https://www.youtube.com/embed/UMadonih5Tw?rel=0?rel=0"
+                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
               <p1><i>-Blender Club Example-</i></p1>
               <br><br>
               <p>This video is the first of a seven-video playlist that show elementary school students the basics of using Blender.</p>
@@ -362,9 +392,28 @@
               <a id="link" href="https://randocalrissian.itch.io/goodbye-net-neutrality" target="_blank">GNN - itch.io</a>
               <br><br><p1>----------</p1><br><br>
 
-              <a id="hoverPic" href="https://www.youtube.com/embed/XWxzgQAhnv4"><img id="thumbnail" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/Chap6.PNG?raw=true"></a>
-              <!--<iframe width="100%" height="394" src="https://www.youtube.com/embed/XWxzgQAhnv4"
-              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+              <p class="codepen" data-height="590" data-theme-id="0" data-default-tab="result" data-user="tkrand" data-slug-hash="BqMbvN" style="height: 590px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Solar System Model">
+                    <span>See the Pen <a href="https://codepen.io/tkrand/pen/BqMbvN/">
+                    Solar System Model</a> by Tallen Rand (<a href="https://codepen.io/tkrand">@tkrand</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                  <p1><i>-Solar System Model-</i></p1>
+                <br><br>
+                <p>I made this model of the Solar System for my 5th graders using Blender and Codepen (HTML, CSS). We were actually experimenting to see whether Github or Bitbucket
+                    worked better with Chromebooks (Verdict: Github worked better, but Bitbucket was easier to use).
+                </p>
+                <br><p1>----------</p1><br><br>
+
+              <div id="ytbox4">
+                    <div id="ytpic4">
+                        <a id="hoverPic4" href="#"><img id="thumbnail4" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/Chap6.PNG?raw=true"></a>
+                    </div>
+                    <div id="ytvid4">
+                            <iframe id="ytvideo4" width="100%" height="100%" src="https://www.youtube.com/embed/XWxzgQAhnv4?rel=0"
+                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
               <p1><i>-Making a Video Game in Blender-</i></p1>
               <br><br>
               <p>This video shows a chapter from a book that I wrote for my 5th grade students. It teachers them how to make a simple video game in Blender.</p>
@@ -373,9 +422,16 @@
                 <a id="link" href="https://www.youtube.com/channel/UCv1b4K5EcNqTuA2r0_8AM7w/videos" target="_blank">Blender Game</a>
                 <br><br><p1>----------</p1><br><br>
 
-            <a id="hoverPic" href="https://www.youtube.com/embed/gB6wInAKAsc"><img id="thumbnail" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/CodeChallenge.PNG?raw=true"></a>
-                <!--<iframe width="100%" height="394" src="https://www.youtube.com/embed/gB6wInAKAsc"
-              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+
+                <div id="ytbox5">
+                        <div id="ytpic5">
+                            <a id="hoverPic5" href="#"><img id="thumbnail5" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/CodeChallenge.PNG?raw=true"></a>
+                        </div>
+                        <div id="ytvid5">
+                                <iframe id="ytvideo5" width="100%" height="394" src="https://www.youtube.com/embed/gB6wInAKAsc?rel=0"
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
               <p1><i>-Coding Challenge #4-</i></p1>
               <br><br>
               <p>I would often give my 5th grade students coding challenges to solve. This video asks them to figure out a way to get the cube to the landing platform.</p>
@@ -413,11 +469,59 @@
 </div>
 
       <script>
-        $(document).ready(function(){
-        $(".nav-tabs a").click(function(){
-          $(this).tab('show');
+            $(document).ready(function(){
+                $(".nav-tabs a").click(function(){
+                $(this).tab('show');
+                });
             });
-        });
+
+            $(document).ready(function() {
+                $('#hoverPic').on('click', function(ev) {
+                $("#ytvideo")[0].src += "&autoplay=1";
+                ev.preventDefault();
+                $('#ytpic').fadeOut(300, function() {
+                    $(this).remove();
+                });
+                });
+            });
+
+            $(document).ready(function() {
+                $('#hoverPic2').on('click', function(ev) {
+                $("#ytvideo2")[0].src += "&autoplay=1";
+                ev.preventDefault();
+                $('#ytpic2').fadeOut(300, function() {
+                    $(this).remove();
+                });
+                });
+            });
+            $(document).ready(function() {
+                $('#hoverPic3').on('click', function(ev) {
+                $("#ytvideo3")[0].src += "&autoplay=1";
+                ev.preventDefault();
+                $('#ytpic3').fadeOut(300, function() {
+                    $(this).remove();
+                });
+                });
+            });
+            $(document).ready(function() {
+                $('#hoverPic4').on('click', function(ev) {
+                $("#ytvideo4")[0].src += "&autoplay=1";
+                ev.preventDefault();
+                $('#ytpic4').fadeOut(300, function() {
+                    $(this).remove();
+                });
+                });
+            });
+            $(document).ready(function() {
+                $('#hoverPic5').on('click', function(ev) {
+                $("#ytvideo5")[0].src += "&autoplay=1";
+                ev.preventDefault();
+                $('#ytpic5').fadeOut(300, function() {
+                    $(this).remove();
+                });
+                });
+            });
+        
         </script>
     </body>
 </html>
