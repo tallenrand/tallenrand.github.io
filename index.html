@@ -26,7 +26,7 @@
         border-bottom: 1pt gray dashed;
         background-color: black;
         top: 0;
-        z-index: 1;
+        z-index: 100;
     }
     .button {
         width: 50px;
@@ -87,6 +87,7 @@
         text-align: center;
         height: 50px;
         padding: 8px;
+        z-index: 100;
     }
     .nav {
         margin: 0 auto;
@@ -202,13 +203,23 @@
         width: 700px;
         height: 394px;
         margin: 0 auto;
-        
         z-index: -1;
     }
-    #hoverPic:hover {
-        opacity: .5;
-        z-index: -1;
-        position: static;
+    #ytbox {
+        margin: 0 auto;
+    }
+    #ytpic {
+        position: relative;
+        z-index: 3;
+        display: block;
+    }
+    #ytpic:hover {
+        opacity: 0;
+    }
+    #ytvid {
+        position: relative;
+        z-index: 2;
+        margin-top: -394px;
     }
 
 </style>
@@ -281,7 +292,6 @@
           <div id="portfolio" class="tab-pane fade">
             <h2>Portfolio</h2>
             <br>
-
             <div id="portWide">
                 <p1 class="codepen" data-height="613" data-theme-id="0" data-default-tab="result" data-user="tkrand"
                     data-slug-hash="dmyXbe" style="height: 613px; box-sizing: border-box; display: flex; align-items: center;
@@ -297,10 +307,18 @@
                 <p>I made this Random Quote Generator in Codepen using HTML, CSS, and JavaScript to fulfill a coding challenge for freeCodeCamp.org.</p>
                 <br><p1>----------</p1><br><br>
             
-                <a id="hoverPic" href="https://www.youtube.com/embed/hcPxYXr-OuU"><img id="thumbnail" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/GNN.PNG?raw=true"></a>
-                <!--<iframe width="700" height="394" src="https://www.youtube.com/embed/hcPxYXr-OuU" 
-                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>-->
+            <div id="ytbox">
+                <div id="ytpic">
+                    <a id="hoverPic" href="https://www.youtube.com/embed/hcPxYXr-OuU" autoplay="true"><img id="thumbnail" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/GNN.PNG?raw=true"></a>
+                </div>
+
+                <div id="ytvid">
+                    <iframe width="700" height="394" src="https://www.youtube.com/embed/hcPxYXr-OuU" 
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+            </div>
+
                 <p1><i>-Goodbye, Net Neutrality-</i></p1>
                 <br><br>
                 <p>I made this short game using Blender and Unreal Engine 4, shortly after Ajit Pai illegally killed net neutrality in 2017.</p>
