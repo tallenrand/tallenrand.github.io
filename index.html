@@ -14,19 +14,19 @@
         </head>
 <body>
 <style>
-    body {
-        height: 100vh;
-        background-color: red;
+    html { font-size: 100%; // this is usually 16px by default }
+
+body {
         background-image: linear-gradient(to right, black, #3a9eea, black);
     }
-    #box  {
+    #boxHeader {
         position: fixed;
+        margin: 0 auto;
         left: 0;
         top: 0;
         width: 100%;
         border-bottom: 1pt gray dashed;
         background-color: black;
-        top: 0;
         z-index: 500;
     }
     .button {
@@ -62,16 +62,16 @@
     #center {
         margin: 0 auto;
         text-align: center;
-        max-width: 1000px;
+        max-width: 100%;
         border: 2pt black solid;
     }
     #coder {
-        width: 300px;
+        max-width: 300px;
+        width: 100%;
     }
     .container {
-        max-width: 2000px;
-        min-width: 400px;
-        height: 100vh;
+        max-width: 100%;
+        width: auto;
         margin: 0 auto;
     }
     #footer {
@@ -89,33 +89,33 @@
     }
     .nav {
         margin: 0 auto;
-        text-align: center;
-        border: 0pt white solid;
-        width: 304px;
-        border-radius: 20px;
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-bottom: .5%;
+        max-width: 1000px;
         
     }
     .nav a {
         font-family: 'Libre Baskerville', serif;
         text-align: center;
         font-size: 16px;
-        padding: 10px;
-        width: 100px;
+        width: 100%;
         height: 40px;
         border: 0pt solid black;
         background: #c1c1c1;
         color: black;
+        border: 1pt dashed gray;
     }
     a:hover {
         text-align: center;
-        width: 100px;
+        width: 100%;
         border: 0pt solid black;
         background: gray;
         color: black;
     }
     .href:active {
         text-align: center;
-        width: 90px;
+        width: 100%;
         border: 0pt solid black;
         background: gray;
         color: black;
@@ -123,8 +123,8 @@
     #link:link, #link:visited {
         font-family: 'Libre Baskerville', serif;
         text-align: center;
-        width: 260px;
-        font-size: 24px;
+        width: 100%;
+        font-size: 16px;
         background-color: #337AB7;
         color: white;
         padding: 10px;
@@ -135,7 +135,7 @@
     #link:hover {
         font-family: 'Libre Baskerville', serif;
         text-align: center;
-        width: 260px;
+        width: 100%;
         border: 0pt solid black;
         background: #c1c1c1;
         color: black;
@@ -145,25 +145,25 @@
     h1 {
         font-family: 'Libre Baskerville', serif;
         text-align: center;
-        font-size: 40px;
+        font-size: 2.2em;
         color: white;
     }
     h2 {
         font-family: 'Libre Baskerville', serif;
         text-align: center;
-        font-size: 36px;
+        font-size: 2.1em;
         color: white;
     }
     h3 {
         font-family: 'Libre Baskerville', serif;
         text-align: center;
-        font-size: 30px;
+        font-size: 1.8em;
         color: white;
     }
     p {
         font-family: 'Libre Baskerville', serif;
         text-align: justify;
-        font-size: 20px;
+        font-size: 1.2em;
         color: white;
         margin-left: 6%;
         margin-right: 6%;
@@ -171,29 +171,29 @@
     p1 {
         font-family: 'Libre Baskerville', serif;
         text-align: center;
-        font-size: 20px;
+        font-size: 1.2em;
         color: white;
         margin-left: 6%;
         margin-right: 6%;
-        width: 500px;
+        width: 100%;
     }
     #portWide {
-        width: 700px;
+        width: 100%;
         margin: 0 auto;
     }
     #rand {
-        width: 200px;
-        height: 200px;
+        max-width: 200px;
+        max-height: 200px;
+        width: 100%;
     }
     .tab-content {
-        max-width: 1500px;
-        min-width: 600px;
+        max-width: 1000px;
+        width: auto;
+        height: auto;
         margin: 0 auto;
         text-align: center;
-        height: 100vh;
         border: 2pt solid black;
         background-color: #444444;
-        padding-top: 140px;
         padding-bottom: 140px;
         padding-left: 6%;
         padding-right: 6%;
@@ -232,79 +232,78 @@
 </style>
 
 <div class="container">
-    <div id="box">
+    <div id="boxHeader" class="header">
         <h1>Tallen Rand</h1>
-            <ul class="nav nav-pills">
+            <ul class="nav nav-pills nav-justified">
                 <li class="active"><a data-toggle="pill" href="#code">Coding</a></li>
                 <li><a data-toggle="pill" href="#portfolio">Portfolio</a></li>
                 <li><a data-toggle="pill" href="#about">About</a></li>
-            </ul>
-        <br>       
+            </ul>   
     </div>
 
 
-        <div class="tab-content">
-          <div id="code" class="tab-pane fade in active">
-            <h2>Coding for Teachers</h2>
-            <br>
-            <img id="coder" src="https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-            <br><br>
-            <p1>This page will serve as a list of resources that teachers can use to promote the use of technology in the classroom.</p1>
-            <br><br>
-            <h3>1) Teach your students how to type</h3>
-            <p>I've found that it's not wise to assume your students have been taught how to type. Use the following free resources to get your students typing quickly:</p>
-            <a id="link" href="https://www.typingclub.com" target="_blank">Typing Club</a>
-            <a id="link" href="https://www.10fastfingers.com" target="_blank">10fastfingers.com</a>
-            <a id="link" href="https://www.google.com/docs/about/" target="_blank">Google Docs</a>
-            <br><br>
-            <h3>2) Teach your students how to code</h3>
-            <p>The links below are great for all students, whether they have zero coding knowledge or have been coding for years:</p>
-            <a id="link" href="https://www.scratch.mit.edu" target="_blank">scratch.mit.edu</a>
-            <a id="link" href="https://www.codepen.io" target="_blank">codepen.io</a>
-            <a id="link" href="https://www.freecodecamp.org" target="_blank">freeCodeCamp.org</a>
-            <a id="link" href="https://www.w3schools.com" target="_blank">w3schools.com</a>
-            <a id="link" href="https://code.org/" target="_blank">code.org</a>
-            <br><br>
-            <h3>3) Create awesome computer art</h3>
-            <p>I found that many of my students were very interested in using computers to create art, so I started an after-school program called <i>Blender Club</i>.
-            The following software is industry-level and available completely free, so it is perfect for students wishing to become animators, game developers, or graphic designers:</p>
-            <a id="link" href="https://www.blender.org" target="_blank">blender.org</a>
-            <a id="link" href="https://inkscape.org" target="_blank">inkscape.org</a>
-            <a id="link" href="https://www.gimp.org" target="_blank">gimp.org</a>
-            <br>
-            <a id="link" href="https://www.freecadweb.org/" target="_blank">FreeCAD</a>
-            <a id="link" href="https://www.storyjumper.com" target="_blank">StoryJumper.com</a>
-            <br><br>
-            <h3>4) Refurbish old computers</h3>
-            <p>After speaking to my schools' IT manager, I found that there were tons of old computers sitting around, waiting to be trashed. The IT manager gave me
-                as many computers and computer parts that I wanted, so I had my students take them apart and replace any parts that weren't working. My students were amazed at how
-                easy it was to fix computers, so I found it to be a great learning experience. We installed various versions of Linux on various machines and created our own computer
-                lab in the back of the classroom. The versions of Linux, also known as <i>distros</i>, are freely available and are a great free alternative to other paid operating
-                systems:
-            </p>
-            <a id="link" href="https://linuxmint.com/download.php" target="_blank">Linux Mint</a>
-            <a id="link" href="https://ubuntu.com/download/desktop" target="_blank">Ubuntu</a>
-            <a id="link" href="https://www.raspberrypi.org/downloads/noobs/" target="_blank">NOOBS</a>
-            <br><br>
-            <h3>5) Game Development</h3>
-            <p>If your school has access to high-end computers, there are some great, free programs that allow your students to develop their own apps and games (some 
-                of these only offer free student editions):
-            </p>
-            <a id="link" href="https://www.autodesk.com/education/free-software/maya" target="_blank">Maya</a>
-            <a id="link" href="https://www.unrealengine.com/en-US/download" target="_blank">Unreal Engine 4</a>
-            <a id="link" href="https://unity3d.com/get-unity/download" target="_blank">Unity</a>
-            <a id="link" href="https://developer.android.com/studio/index.html" target="_blank">Android Studio</a>
-            <a id="link" href="https://coronalabs.com/" target="_blank">Corona</a>
-            <br><br>
-            <h3>6) Free Repositories for Developers</h3>
-            <p>If you haven't used Github or Bitbucket (or any other site offering free repositories, for that matter), then I highly recommend you
-                start now. In my elementary school classroom, we only used these to host images, but beginners can easily do much more than that, especially if Github is combined with Github Desktop.
-            </p>
-            <a id="link" href="https://github.com/" target="_blank">Github</a>
-            <a id="link" href="https://bitbucket.org/product" target="_blank">Bitbucket</a>
-            <br><br><br>
-            <h3>--------------------------------------------------</h3>
-          </div>
+    <div class="tab-content">
+        <div id="code" class="tab-pane fade in active">
+          <h2>Coding for Teachers</h2>
+          <br>
+          <img id="coder" src="https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+          <br><br>
+          <p1>This page will serve as a list of resources that teachers can use to promote the use of technology in the classroom.</p1>
+          <br><br>
+          <h3>1) Teach your students how to type</h3>
+          <p>I've found that it's not wise to assume your students have been taught how to type. Use the following free resources to get your students typing quickly:</p>
+          <a id="link" href="https://www.typingclub.com" target="_blank">Typing Club</a>
+          <a id="link" href="https://www.10fastfingers.com" target="_blank">10fastfingers</a>
+          <a id="link" href="https://www.google.com/docs/about/" target="_blank">Google Docs</a>
+          <br><br>
+          <h3>2) Teach your students how to code</h3>
+          <p>The links below are great for all students, whether they have zero coding knowledge or have been coding for years:</p>
+          <a id="link" href="https://www.scratch.mit.edu" target="_blank">Scratch</a>
+          <a id="link" href="https://www.codepen.io" target="_blank">codepen</a>
+          <a id="link" href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a>
+          <a id="link" href="https://www.w3schools.com" target="_blank">w3schools</a>
+          <a id="link" href="https://code.org/" target="_blank">code.org</a>
+          <br><br>
+          <h3>3) Create awesome computer art</h3>
+          <p>I found that many of my students were very interested in using computers to create art, so I started an after-school program called <i>Blender Club</i>.
+          The following software is industry-level and available completely free, so it is perfect for students wishing to become animators, game developers, or graphic designers:</p>
+          <a id="link" href="https://www.blender.org" target="_blank">Blender</a>
+          <a id="link" href="https://inkscape.org" target="_blank">Inkscape</a>
+          <a id="link" href="https://www.gimp.org" target="_blank">Gimp</a>
+          <br>
+          <a id="link" href="https://www.freecadweb.org/" target="_blank">FreeCAD</a>
+          <a id="link" href="https://www.storyjumper.com" target="_blank">StoryJumper</a>
+          <br><br>
+          <h3>4) Refurbish old computers</h3>
+          <p>After speaking to my schools' IT manager, I found that there were tons of old computers sitting around, waiting to be trashed. The IT manager gave me
+              as many computers and computer parts that I wanted, so I had my students take them apart and replace any parts that weren't working. My students were amazed at how
+              easy it was to fix computers, so I found it to be a great learning experience. We installed various versions of Linux on various machines and created our own computer
+              lab in the back of the classroom. The versions of Linux, also known as <i>distros</i>, are freely available and are a great free alternative to other paid operating
+              systems:
+          </p>
+          <a id="link" href="https://linuxmint.com/download.php" target="_blank">Linux Mint</a>
+          <a id="link" href="https://ubuntu.com/download/desktop" target="_blank">Ubuntu</a>
+          <a id="link" href="https://www.raspberrypi.org/downloads/noobs/" target="_blank">NOOBS</a>
+          <br><br>
+          <h3>5) Game Development</h3>
+          <p>If your school has access to high-end computers, there are some great, free programs that allow your students to develop their own apps and games (some 
+              of these only offer free student editions):
+          </p>
+          <a id="link" href="https://www.autodesk.com/education/free-software/maya" target="_blank">Maya</a>
+          <a id="link" href="https://www.unrealengine.com/en-US/download" target="_blank">Unreal Engine</a>
+          <a id="link" href="https://unity3d.com/get-unity/download" target="_blank">Unity</a>
+          <a id="link" href="https://developer.android.com/studio/index.html" target="_blank">Android Studio</a>
+          <a id="link" href="https://coronalabs.com/" target="_blank">Corona</a>
+          <br><br>
+          <h3>6) Free Repositories for Developers</h3>
+          <p>If you haven't used Github or Bitbucket (or any other site offering free repositories, for that matter), then I highly recommend you
+              start now. In my elementary school classroom, we only used these to host images, but beginners can easily do much more than that, especially if Github is combined with Github Desktop.
+          </p>
+          <a id="link" href="https://github.com/" target="_blank">Github</a>
+          <a id="link" href="https://bitbucket.org/product" target="_blank">Bitbucket</a>
+          <br><br><br>
+          <h3>--------------------------------------------------</h3>
+        </div>
 
 
           <div id="portfolio" class="tab-pane fade">
@@ -473,18 +472,23 @@
 
       <script>
 
-            var ytvideoPlay;
+$(document).ready(function() {
+              var contentPlacement =          
+                  $('#boxHeader').position().top + $('#boxHeader').height();
+                  $('.tab-content').css('margin-top',contentPlacement);
+                  });//puts the tab content beneath the header when page is loaded
 
-            ytvideoPlay = false;
-
-            userHasScrolled = false;
+            $(window).resize(function() {
+              var contentPlacement =          
+                  $('#boxHeader').position().top + $('#boxHeader').height();
+                  $('.tab-content').css('margin-top',contentPlacement);
+                  });//puts the tab content beneath the header when window is resized            
 
             $(document).ready(function(){
                 $(".nav-tabs a").click(function(){
                 $(this).tab('show');
                 });
             });
-
             $(document).ready(function() {
                 $('#hoverPic').on('click', function(ev) {
                 $("#ytvideo")[0].src += "&autoplay=1";
@@ -495,7 +499,6 @@
                 });
                 });
             });
-
             $(document).ready(function() {
                 $('#hoverPic2').on('click', function(ev) {
                 $("#ytvideo2")[0].src += "&autoplay=1";
@@ -532,6 +535,7 @@
                 });
                 });
             });
+
 
             
         
