@@ -4,7 +4,6 @@
             <title>Rand Portfolio</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
             <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
@@ -14,7 +13,7 @@
         </head>
 <body>
 <style>
-    html { font-size: 100%; // this is usually 16px by default }
+    html { font-size: 100%; }
 
 body {
         background-image: linear-gradient(to right, black, #3a9eea, black);
@@ -25,39 +24,41 @@ body {
         left: 0;
         top: 0;
         width: 100%;
+        height: 100px;
         border-bottom: 1pt gray dashed;
         background-color: black;
         z-index: 500;
     }
     .button {
+        margin-top: 20px;
         width: 50px;
-        height: 36px;
-        border-radius: 20px;
+        height: 30px;
+        border-radius: 2px;
         margin: 1px;
         outline: none;
         border: 1.5pt solid black;
         background-color: #337AB7;
-        box-shadow: -1px 1px 4px white;
+
     }
     .button:hover {
         width: 50px;
-        height: 36px;
-        border-radius: 20px;
+        height: 30px;
+        border-radius: 2px;
         margin: 1px;
         outline: none;
         border: 1.5pt solid black;
         background-color: gray;
-        box-shadow: -1px 1px 4px white;
+
     }
     .button:active {
         width: 50px;
-        height: 36px;
-        border-radius: 20px;
+        height: 30px;
+        border-radius: 2px;
         margin: 1px;
         outline: none;
         border: 1.5pt solid black;
         background-color: darkslategray;
-        box-shadow: -1px 1px 4px white;
+
     }
     #center {
         margin: 0 auto;
@@ -83,22 +84,23 @@ body {
         background-color: black;
         color: white;
         text-align: center;
-        height: 56px;
+        height: 30px;
         padding: 8px;
         z-index: 500;
     }
     .nav {
         margin: 0 auto;
-        padding-left: 4%;
-        padding-right: 4%;
+        padding-left: 2%;
+        padding-right: 2%;
         padding-bottom: .5%;
         max-width: 1000px;
+        list-style-type: none;
         
     }
     .nav a {
         font-family: 'Libre Baskerville', serif;
         text-align: center;
-        font-size: 16px;
+        font-size: 12px;
         width: 100%;
         height: 40px;
         border: 0pt solid black;
@@ -186,6 +188,19 @@ body {
         max-height: 200px;
         width: 100%;
     }
+    .spacer
+    {
+        
+        width: 100%;
+        height: 110px;
+        margin: 0 auto;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border-bottom: 1pt gray dashed;
+        background-color: black;
+        z-index: 20;
+    }
     .tab-content {
         max-width: 1000px;
         width: auto;
@@ -228,22 +243,70 @@ body {
         width: 100%;
         height: 100%;
     }
-
+    .inner {
+        display: inline-block;
+    }
+    .outer {
+        width: 100%;
+        text-align: center;
+        margin-top: -16px;
+    }
+    button {
+        font-family: 'Libre Baskerville', serif;
+        text-align: center;
+        font-size: 12px;
+        width: 70px;
+        height: 30px;
+        border-radius: 2px;
+        margin: 0px;
+        outline: none;
+        border: 1.5pt solid black;
+        background-color: #337AB7;
+        
+    }
+    button:hover {
+        font-family: 'Libre Baskerville', serif;
+        text-align: center;
+        font-size: 12px;
+        width: 70px;
+        height: 30px;
+        border-radius: 2px;
+        margin: 0px;
+        outline: none;
+        border: 1.5pt solid black;
+        background-color: gray;
+        
+    }
+    button:active {
+        font-family: 'Libre Baskerville', serif;
+        text-align: center;
+        font-size: 12px;
+        width: 70px;
+        height: 30px;
+        border-radius: 2px;
+        margin: 0px;
+        outline: none;
+        border: 1.5pt solid black;
+        background-color: darkslategray;
+    }
+    #spacer {
+        height: 100px;
+    }
 </style>
 
 <div class="container">
     <div id="boxHeader" class="header">
         <h1>Tallen Rand</h1>
-            <ul class="nav nav-pills nav-justified">
-                <li class="active"><a data-toggle="pill" href="#code">Coding</a></li>
-                <li><a data-toggle="pill" href="#portfolio">Portfolio</a></li>
-                <li><a data-toggle="pill" href="#about">About</a></li>
-            </ul>   
-    </div>
+            <div class="outer">
+                <div class="inner"><button href="#code"><b>Coding</b></button></div>
+                <div class="inner"><button href="#portfolio"><b>Portfolio</b></button></div>
+                <div class="inner"><button href="#about"><b>About</b></button></div>
+            </div>
+    </div> 
 
-
-    <div class="tab-content">
+    <div class="tab-content">         
         <div id="code" class="tab-pane fade in active">
+            <div id="spacer">&nbsp;</div>
           <h2>Coding for Elementary Teachers</h2>
           <br>
           <img id="coder" src="https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
