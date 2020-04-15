@@ -13,595 +13,153 @@
         </head>
 <body>
 <style>
-    html { font-size: 100%; }
-
-body {
-        background-image: linear-gradient(to right, black, #3a9eea, black);
+    html { 
+        font-size: 100%; 
     }
-    #boxHeader {
-        position: fixed;
-        margin: 0 auto;
-        left: 0;
-        top: 0;
+    body {
+        background-color: white;
+    }
+    #fixedheader {
+        position: relative;
+        top: 0px;
+        left: 0px;
         width: 100%;
-        height: 100px;
-        border-bottom: 1pt gray dashed;
-        background-color: black;
-        z-index: 500;
+        height: 80px;
+        padding: 0px;
+        font-size: 20px;
+        text-align: center;
+        z-index: 30;
+        opacity: 0.8;
     }
     .button {
-        margin-top: 20px;
         width: 50px;
-        height: 30px;
-        border-radius: 2px;
-        margin: 1px;
+        height: 40px;
+        border-radius: 20px;
+        margin-top: 0px;
+        margin-left: 2px;
+         margin-right: 2px;
         outline: none;
         border: 1.5pt solid black;
-        background-color: #337AB7;
-
+        background-color: white;
+        box-shadow: -4px 4px 8px white;
     }
     .button:hover {
         width: 50px;
-        height: 30px;
-        border-radius: 2px;
-        margin: 1px;
+        height: 40px;
+        border-radius: 20px;
+        margin-left: 2px;
+        margin-right: 2px;
         outline: none;
         border: 1.5pt solid black;
         background-color: gray;
-
+        box-shadow: -4px 4px 8px white;
     }
     .button:active {
         width: 50px;
-        height: 30px;
-        border-radius: 2px;
-        margin: 1px;
-        outline: none;
-        border: 1.5pt solid black;
-        background-color: darkslategray;
-
-    }
-    #center {
-        margin: 0 auto;
-        text-align: center;
-        max-width: 100%;
-        border: 2pt black solid;
-    }
-    #coder {
-        max-width: 300px;
-        width: 100%;
-    }
-    .container {
-        max-width: 100%;
-        width: auto;
-        margin: 0 auto;
-    }
-    #footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        border-top: 1pt gray dashed;
-        width: 100%;
-        background-color: black;
-        color: white;
-        text-align: center;
-        height: 30px;
-        padding: 8px;
-        z-index: 500;
-    }
-    .nav {
-        margin: 0 auto;
-        padding-left: 2%;
-        padding-right: 2%;
-        padding-bottom: .5%;
-        max-width: 1000px;
-        list-style-type: none;
-        
-    }
-    .nav a {
-        font-family: 'Libre Baskerville', serif;
-        text-align: center;
-        font-size: 12px;
-        width: 100%;
         height: 40px;
-        border: 0pt solid black;
-        background: #c1c1c1;
-        color: black;
-        border: 1pt dashed gray;
+        border-radius: 20px;
+        margin-left: 2px;
+        margin-right: 2px;
+        outline: none;
+        border: 1.5pt solid black;
+        background-color: green;
+        box-shadow: -4px 4px 8px white;
     }
-    a:hover {
-        text-align: center;
-        width: 100%;
-        border: 0pt solid black;
-        background: gray;
-        color: black;
+    #headerFloatLeft {
+        float: left;
     }
-    .href:active {
-        text-align: center;
-        width: 100%;
-        border: 0pt solid black;
-        background: gray;
-        color: black;
+    #headerFloatRight {
+        float: right
     }
-    #link:link, #link:visited {
-        font-family: 'Libre Baskerville', serif;
-        text-align: center;
-        width: 100%;
-        font-size: 16px;
-        background-color: #337AB7;
+    .tablink {
+        background-color: #555;
         color: white;
-        padding: 10px;
-        margin: 2px;
-        display: inline-block;
-        border-radius: 4px;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 25%;
     }
-    #link:hover {
-        font-family: 'Libre Baskerville', serif;
-        text-align: center;
-        width: 100%;
-        border: 0pt solid black;
-        background: #c1c1c1;
-        color: black;
-        display: inline-block;
-        text-decoration: none;
+
+    .tablink:hover {
+    background-color: #777;
     }
-    h1 {
-        font-family: 'Libre Baskerville', serif;
-        text-align: center;
-        font-size: 2.2em;
+
+/* Style the tab content (and add height:100% for full page content) */
+    .tabcontent {
         color: white;
-    }
-    h2 {
-        font-family: 'Libre Baskerville', serif;
-        text-align: center;
-        font-size: 2.1em;
-        color: white;
-    }
-    h3 {
-        font-family: 'Libre Baskerville', serif;
-        text-align: center;
-        font-size: 1.8em;
-        color: white;
-    }
-    p {
-        font-family: 'Libre Baskerville', serif;
-        text-align: justify;
-        font-size: 1.2em;
-        color: white;
-        margin-left: 6%;
-        margin-right: 6%;
-    }
-    p1 {
-        font-family: 'Libre Baskerville', serif;
-        text-align: center;
-        font-size: 1.2em;
-        color: white;
-        margin-left: 6%;
-        margin-right: 6%;
-        width: 100%;
-    }
-    #portWide {
-        width: 100%;
-        margin: 0 auto;
-    }
-    #rand {
-        max-width: 200px;
-        max-height: 200px;
-        width: 100%;
-    }
-    .spacer
-    {
-        
-        width: 100%;
-        height: 110px;
-        margin: 0 auto;
-        left: 0;
-        top: 0;
-        width: 100%;
-        border-bottom: 1pt gray dashed;
-        background-color: black;
-        z-index: 20;
-    }
-    .tab-content {
-        max-width: 1000px;
-        width: auto;
-        height: auto;
-        margin: 0 auto;
-        text-align: center;
-        border: 2pt solid black;
-        background-color: #444444;
-        padding-bottom: 140px;
-        padding-left: 6%;
-        padding-right: 6%;
-        overflow: auto;
-        scrollbar-width: thin;
-    }
-    #thumbnail, #thumbnail2, #thumbnail3, #thumbnail4, #thumbnail5 {
-        width: 700px;
-        height: 394px;
-        margin: 0 auto;
-        z-index: -1;
-    }
-    #ytbox, #ytbox2, #ytbox3, #ytbox4, #ytbox5 {
-        margin: 0 auto;
-        width: 700px;
-        height: 394px;
-        position: relative;
-    }
-    #ytpic, #ytpic2, #ytpic3, #ytpic4, #ytpic5 {
-        position: absolute;
-        z-index: 3;
-        display: block;
-        width: 100%;
+        display: none;
+        padding: 100px 20px;
         height: 100%;
     }
-    #ytpic:hover, #ytpic2:hover, #ytpic3:hover, #ytpic4:hover, #ytpic5:hover {
-        filter: brightness(50%);
-    }
-    #ytvid, #ytvid2, #ytvid3, #ytvid4, #ytvid5{
-        position: absolute;
-        z-index: 2;
-        width: 100%;
-        height: 100%;
-    }
-    .inner {
-        display: inline-block;
-    }
-    .outer {
-        width: 100%;
-        text-align: center;
-        margin-top: -16px;
-    }
-    button {
-        font-family: 'Libre Baskerville', serif;
-        text-align: center;
-        font-size: 12px;
-        width: 70px;
-        height: 30px;
-        border-radius: 2px;
-        margin: 0px;
-        outline: none;
-        border: 1.5pt solid black;
-        background-color: #337AB7;
-        
-    }
-    button:hover {
-        font-family: 'Libre Baskerville', serif;
-        text-align: center;
-        font-size: 12px;
-        width: 70px;
-        height: 30px;
-        border-radius: 2px;
-        margin: 0px;
-        outline: none;
-        border: 1.5pt solid black;
-        background-color: gray;
-        
-    }
-    button:active {
-        font-family: 'Libre Baskerville', serif;
-        text-align: center;
-        font-size: 12px;
-        width: 70px;
-        height: 30px;
-        border-radius: 2px;
-        margin: 0px;
-        outline: none;
-        border: 1.5pt solid black;
-        background-color: darkslategray;
-    }
-    #spacer {
-        height: 100px;
-    }
+
+    #work {background-color: red;}
+    #about {background-color: green;}
+    #resume {background-color: blue;}
+    
+
 </style>
 
 <div class="container">
-    <div id="boxHeader" class="header">
-        <h1>Tallen Rand</h1>
-            <div class="outer">
-                <div class="inner"><button href="#code"><b>Coding</b></button></div>
-                <div class="inner"><button href="#portfolio"><b>Portfolio</b></button></div>
-                <div class="inner"><button href="#about"><b>About</b></button></div>
+    <div id="fixedheader">  
+        <div class="headerButtons">
+            <div id="headerFloatLeft">
+                <h1>Your Name</h1>
             </div>
-    </div> 
-
-    <div class="tab-content">         
-        <div id="code" class="tab-pane fade in active">
-            <div id="spacer">&nbsp;</div>
-          <h2>Coding for Elementary Teachers</h2>
-          <br>
-          <img id="coder" src="https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-          <br><br>
-          <p1>This page will serve as a list of resources that teachers can use to promote the use of technology in the classroom.</p1>
-          <br><br>
-          <h3>1) Teach your students how to type</h3>
-          <p>I've found that it's not wise to assume your students have been taught how to type. Use the following free resources to get your students typing quickly:</p>
-          <a id="link" href="https://www.typingclub.com" target="_blank">Typing Club</a>
-          <a id="link" href="https://www.10fastfingers.com" target="_blank">10fastfingers</a>
-          <a id="link" href="https://www.google.com/docs/about/" target="_blank">Google Docs</a>
-          <br><br>
-          <h3>2) Teach your students how to code</h3>
-          <p>The links below are great for all students, whether they have zero coding knowledge or have been coding for years:</p>
-          <a id="link" href="https://www.scratch.mit.edu" target="_blank">Scratch</a>
-          <a id="link" href="https://www.codepen.io" target="_blank">codepen</a>
-          <a id="link" href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a>
-          <a id="link" href="https://www.w3schools.com" target="_blank">w3schools</a>
-          <a id="link" href="https://code.org/" target="_blank">code.org</a>
-          <br><br>
-          <h3>3) Create awesome computer art</h3>
-          <p>I found that many of my students were very interested in using computers to create art, so I started an after-school program called <i>Blender Club</i>.
-          The following software is industry-level and available completely free, so it is perfect for students wishing to become animators, game developers, or graphic designers:</p>
-          <a id="link" href="https://www.blender.org" target="_blank">Blender</a>
-          <a id="link" href="https://inkscape.org" target="_blank">Inkscape</a>
-          <a id="link" href="https://www.gimp.org" target="_blank">Gimp</a>
-          <br>
-          <a id="link" href="https://www.freecadweb.org/" target="_blank">FreeCAD</a>
-          <a id="link" href="https://www.storyjumper.com" target="_blank">StoryJumper</a>
-          <br><br>
-          <h3>4) Refurbish old computers</h3>
-          <p>After speaking to my schools' IT manager, I found that there were tons of old computers sitting around, waiting to be trashed. The IT manager gave me
-              as many computers and computer parts that I wanted, so I had my students take them apart and replace any parts that weren't working. My students were amazed at how
-              easy it was to fix computers, so I found it to be a great learning experience. We installed various versions of Linux on various machines and created our own computer
-              lab in the back of the classroom. The versions of Linux, also known as <i>distros</i>, are freely available and are a great free alternative to other paid operating
-              systems:
-          </p>
-          <a id="link" href="https://linuxmint.com/download.php" target="_blank">Linux Mint</a>
-          <a id="link" href="https://ubuntu.com/download/desktop" target="_blank">Ubuntu</a>
-          <a id="link" href="https://www.raspberrypi.org/downloads/noobs/" target="_blank">NOOBS</a>
-          <br><br>
-          <h3>5) Game Development</h3>
-          <p>If your school has access to high-end computers, there are some great, free programs that allow your students to develop their own apps and games (some 
-              of these only offer free student editions):
-          </p>
-          <a id="link" href="https://www.autodesk.com/education/free-software/maya" target="_blank">Maya</a>
-          <a id="link" href="https://www.unrealengine.com/en-US/download" target="_blank">Unreal Engine</a>
-          <a id="link" href="https://unity3d.com/get-unity/download" target="_blank">Unity</a>
-          <a id="link" href="https://developer.android.com/studio/index.html" target="_blank">Android Studio</a>
-          <a id="link" href="https://coronalabs.com/" target="_blank">Corona</a>
-          <br><br>
-          <h3>6) Free Repositories for Developers</h3>
-          <p>If you haven't used Github or Bitbucket (or any other site offering free repositories, for that matter), then I highly recommend you
-              start now. In my elementary school classroom, we only used these to host images, but beginners can easily do much more than that, especially if Github is combined with Github Desktop.
-          </p>
-          <a id="link" href="https://github.com/" target="_blank">Github</a>
-          <a id="link" href="https://bitbucket.org/product" target="_blank">Bitbucket</a>
-          <br><br><br>
-          <h3>--------------------------------------------------</h3>
-        </div>
-
-
-          <div id="portfolio" class="tab-pane fade">
-            <h2>Portfolio</h2>
-            <br>
-            <div id="portWide">
-                <p1 class="codepen" data-height="613" data-theme-id="0" data-default-tab="result" data-user="tkrand"
-                    data-slug-hash="dmyXbe" style="height: 613px; box-sizing: border-box; display: flex; align-items: center;
-                    justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Small Quote Machine">
-                    <span>See the Pen <a href="https://codepen.io/tkrand/pen/dmyXbe/">
-                    Small Quote Machine</a> by Tallen Rand (<a href="https://codepen.io/tkrand">@tkrand</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                </p1>
-                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-            
-                <p1><i>-Random Quote Generator-</i></p1>
-                <br><br>
-                <p>I made this Random Quote Generator in Codepen using HTML, CSS, and JavaScript to fulfill a coding challenge for freeCodeCamp.org.</p>
-                <br><p1>----------</p1><br><br>
-            
-
-            <div id="ytbox">
-                <div id="ytpic">
-                    <a id="hoverPic" href="#"><img id="thumbnail" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/GNN.PNG?raw=true"></a>
+                <div id="headerFloatRight">
+                    <button class="tablink" onclick="openPage('work', this, 'red')">Home</button>
+                    <button class="tablink" onclick="openPage('about', this, 'green')" id="defaultOpen">News</button>
+                    <button class="tablink" onclick="openPage('resume', this, 'blue')">Contact</button>
                 </div>
-                <div id="ytvid">
-                    <iframe id="ytvideo" width="100%" height="100%" src="https://www.youtube.com/embed/hcPxYXr-OuU?enablejsapi=1&version=3&playerapiid=ytplayer" 
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                </div>
-            </div>
-                <p1><i>-Goodbye, Net Neutrality-</i></p1>
-                <br><br>
-                <p>I made this short game using Blender and Unreal Engine 4, shortly after Ajit Pai illegally killed net neutrality in 2017.</p>
-                <p1>Download it for free at:</p1>
-                <br>
-                <a id="link" href="https://randocalrissian.itch.io/goodbye-net-neutrality" target="_blank">GNN - itch.io</a>
-                <br><br><p1>----------</p1><br><br>
-            
-
-
-            <div id="ytbox2">
-                <div id="ytpic2">
-                    <a id="hoverPic2" href="#"><img id="thumbnail2" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/BF.PNG?raw=true"></a>
-                </div>
-                <div id="ytvid2">
-                    <iframe id="ytvideo2" width="100%" height="100%" src="https://www.youtube.com/embed/bCf53v5oaU8?enablejsapi=1&version=3&playerapiid=ytplayer"
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-                <p1><i>-Budget Friend-</i></p1>
-                <br><br>
-                <p>My wife and I made this Android app using Android Studio, Adobe Photoshop, and Adobe Illustrator.</p>
-                <br>
-                <p1>Download it for $1.99 on Google Play:</p1>
-                <a id="link" href="https://play.google.com/store/apps/details?id=com.tallen.sqliteexample&hl=en_US" target="_blank">Budget Friend</a>
-                <br><br><p1>----------</p1><br><br>
-
-
-                <p1 class="codepen" data-height="457" data-theme-id="0" data-default-tab="result" data-user="tkrand" data-slug-hash="NwOyzr"
-                style="height: 457px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;
-                border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Javascript Calculator">
-                <span>See the Pen <a href="https://codepen.io/tkrand/pen/NwOyzr/">
-                JavaScript Calculator</a> by Tallen Rand (<a href="https://codepen.io/tkrand">@tkrand</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-              </p1>
-              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-              <p1><i>-JavaScript Calculator-</i></p1>
-                <br><br>
-              <p>I made this JavaScript Calculator in Codepen using HTML, CSS, and JavaScript to fulfill a coding challenge for freeCodeCamp.org.</p>
-              <br><p1>----------</p1><br><br>
-
-
-              <div id="ytbox3">
-                    <div id="ytpic3">
-                        <a id="hoverPic3" href="#"><img id="thumbnail3" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/BlenderClub.PNG?raw=true"></a>
-                    </div>
-                    <div id="ytvid3">
-                            <iframe id="ytvideo3" width="100%" height="100%" src="https://www.youtube.com/embed/UMadonih5Tw?rel=0?rel=0"
-                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-              <p1><i>-Blender Club Example-</i></p1>
-              <br><br>
-              <p>This video is the first of a seven-video playlist that show elementary school students the basics of using Blender.</p>
-                <br>
-              <p1>View the entire playlist on Youtube at:</p1>
-              <a id="link" href="https://www.youtube.com/channel/UCv1b4K5EcNqTuA2r0_8AM7w/videos" target="_blank">Blender Club</a>
-              <br><br><p1>----------</p1><br><br>
-
-              <p class="codepen" data-height="720" data-theme-id="0" data-default-tab="result" data-user="tkrand" data-slug-hash="BqMbvN" style="height: 590px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Solar System Model">
-                    <span>See the Pen <a href="https://codepen.io/tkrand/pen/BqMbvN/">
-                    Solar System Model</a> by Tallen Rand (<a href="https://codepen.io/tkrand">@tkrand</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                  <p1><i>-Solar System Model-</i></p1>
-                <br><br>
-                <p>I made this model of the Solar System for my 5th graders using Blender and Codepen (HTML, CSS). We were actually experimenting to see whether Github or Bitbucket
-                    worked better with Chromebooks (Verdict: Github worked better, but Bitbucket was easier to use).
-                </p>
-                <br><p1>----------</p1><br><br>
-
-              <div id="ytbox4">
-                    <div id="ytpic4">
-                        <a id="hoverPic4" href="#"><img id="thumbnail4" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/Chap6.PNG?raw=true"></a>
-                    </div>
-                    <div id="ytvid4">
-                            <iframe id="ytvideo4" width="100%" height="100%" src="https://www.youtube.com/embed/XWxzgQAhnv4?rel=0"
-                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-              <p1><i>-Making a Video Game in Blender-</i></p1>
-              <br><br>
-              <p>This video shows a chapter from a book that I wrote for my 5th grade students. It teachers them how to make a simple video game in Blender.</p>
-              <br>
-              <p1>View the other chapters on Youtube at:</p1>
-                <a id="link" href="https://www.youtube.com/channel/UCv1b4K5EcNqTuA2r0_8AM7w/videos" target="_blank">Blender Game</a>
-                <br><br><p1>----------</p1><br><br>
-
-
-                <div id="ytbox5">
-                        <div id="ytpic5">
-                            <a id="hoverPic5" href="#"><img id="thumbnail5" src="https://github.com/tallenrand/PublicFiles/blob/master/PorfolioPics/CodeChallenge.PNG?raw=true"></a>
-                        </div>
-                        <div id="ytvid5">
-                                <iframe id="ytvideo5" width="100%" height="394" src="https://www.youtube.com/embed/gB6wInAKAsc?rel=0"
-                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-              <p1><i>-Coding Challenge #4-</i></p1>
-              <br><br>
-              <p>I would often give my 5th grade students coding challenges to solve. This video asks them to figure out a way to get the cube to the landing platform.</p>
-              <br>
-              <p1>View other challenges on Youtube at:</p1>
-              <a id="link" href="https://www.youtube.com/channel/UCv1b4K5EcNqTuA2r0_8AM7w/videos" target="_blank">Code Challenges</a>
-              <br><br><p1>----------</p1><br><br>
-            </div>
-        </div>
-
-
-          <div id="about" class="tab-pane fade">
-            <h2>About</h2>
-            <br>
-            <img id="rand" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Tallen_Square.png">
-            <br><br>
-            <p>My name is Tallen Rand and I'm a huge computer nerd. I started teaching my 5th-grade students how to type and code
-                after our school district purhased Chromebooks for everyone and tasked the teachers with integrating
-                technology into the classroom. Blender is my single-most favorite piece of software, but I also enjoy
-                using the Adobe Creative Suite and Unreal Engine 4. Programming, building computers, and playing video games are my main
-                hobbies. I believe that all children should be computer-literate.
-                <br><br>
-                Currently, I am writing a Udemy course that details everything I did to teach my students how to code and create art with computers.
-                Once my course is complete I will share a link to it on this page.
-            </p>
-          </div>
-        </div>
-
-        <div id="footer">
-            <button class="button" onClick="window.open('https://github.com/tallenrand')"><i class="fa fa-github" style="font-size:24px"></i></button>
+           </div>
+       </div>
+       <div id="work" class="tabcontent">
+        <h3>Work</h3>
+        <p>Home is where the heart is..</p>
+      </div>
+      
+      <div id="about" class="tabcontent">
+        <h3>About</h3>
+        <p>Some news this fine day!</p>
+      </div>
+      
+      <div id="resume" class="tabcontent">
+        <h3>Resume</h3>
+        <p>Get in touch, or swing by for a cup of coffee.</p>
+      </div>
+       
+       
+       
+       
+       
+       
+       
+       <footer>
             <button class="button" onClick="window.open('https://www.freecodecamp.com/tallenrand')"><i class="fa fa-free-code-camp" style="font-size:24px"></i></button>
-            <button class="button" onClick="window.open('https://www.linkedin.com/in/tallen-rand/')"><i class="fa fa-linkedin" style="font-size:24px"></i></button>
-        </div>
-        
-</div>
+            <button class="button" onClick="window.open('https://github.com/tallenrand')"><i class="fa fa-github" style="font-size:24px"></i></button>
+            <button class="button"><i class="fa fa-linkedin" style="font-size:24px"></i></button>
+       </footer>
+    </div>
 
+
+    
       <script>
-
-$(document).ready(function() {
-              var contentPlacement =          
-                  $('#boxHeader').position().top + $('#boxHeader').height();
-                  $('.tab-content').css('margin-top',contentPlacement);
-                  });//puts the tab content beneath the header when page is loaded
-
-            $(window).resize(function() {
-              var contentPlacement =          
-                  $('#boxHeader').position().top + $('#boxHeader').height();
-                  $('.tab-content').css('margin-top',contentPlacement);
-                  });//puts the tab content beneath the header when window is resized            
-
-            $(document).ready(function(){
-                $(".nav-tabs a").click(function(){
-                $(this).tab('show');
-                });
-            });
-            $(document).ready(function() {
-                $('#hoverPic').on('click', function(ev) {
-                $("#ytvideo")[0].src += "&autoplay=1";
-                ev.preventDefault();
-                    ytvideoPlay = true;
-                $('#ytpic').fadeOut("normal", function() {
-                    $(this).remove();
-                });
-                });
-            });
-            $(document).ready(function() {
-                $('#hoverPic2').on('click', function(ev) {
-                $("#ytvideo2")[0].src += "&autoplay=1";
-                ev.preventDefault();
-                $('#ytpic2').fadeOut("normal", function() {
-                    $(this).remove();
-                });
-                });
-            });
-            $(document).ready(function() {
-                $('#hoverPic3').on('click', function(ev) {
-                $("#ytvideo3")[0].src += "&autoplay=1";
-                ev.preventDefault();
-                $('#ytpic3').fadeOut(300, function() {
-                    $(this).remove();
-                });
-                });
-            });
-            $(document).ready(function() {
-                $('#hoverPic4').on('click', function(ev) {
-                $("#ytvideo4")[0].src += "&autoplay=1";
-                ev.preventDefault();
-                $('#ytpic4').fadeOut(300, function() {
-                    $(this).remove();
-                });
-                });
-            });
-            $(document).ready(function() {
-                $('#hoverPic5').on('click', function(ev) {
-                $("#ytvideo5")[0].src += "&autoplay=1";
-                ev.preventDefault();
-                $('#ytpic5').fadeOut(300, function() {
-                    $(this).remove();
-                });
-                });
-            });
-
-
-            
-        
+            function openPage(pageName,elmnt,color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+            }
+            document.getElementById("defaultOpen").click(); 
         </script>
     </body>
 </html>
