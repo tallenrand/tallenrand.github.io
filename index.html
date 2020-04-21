@@ -97,6 +97,24 @@
         color: black;
         font-size: 18px;
     }
+    h3 {
+        color: black;
+        font-size: 10px;
+    }
+    #footer {
+        max-width: 400px;
+        align-items: center;
+        justify-content: center;
+        display: block;
+        margin: 0 auto;
+    }
+    #leftFoot {
+        float: left;
+        max-width: 800px;
+    }
+    #rightFoot {
+        float: right;
+    }
     #face {
         width: 180px;
     }
@@ -143,6 +161,33 @@
         text-align: center;
         vertical-align: center;
         margin: 0 auto;
+    }
+    .button {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        outline: none;
+        border: 1pt dashed lightgray;
+        background-color: white;
+        box-shadow: lightgrey -2pt 3pt;
+    }
+    .button:hover {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        outline: none;
+        border: 1pt dashed lightgray;
+        background-color: gray;
+        box-shadow: lightgrey -2pt 3pt;
+    }
+    .button:active {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        outline: none;
+        border: 1pt dashed lightgray;
+        background-color: green;
+        box-shadow: lightgrey -2pt 3pt;
     }
 
 </style>
@@ -198,6 +243,16 @@
         </div>
         <div id="circle9">
             <img id="logo" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F104.244.122.169%2F~diylogodesigns%2Fwp-content%2Fuploads%2F2017%2F07%2Fjava-logo-vector.png&f=1&nofb=1">
+        </div>
+    </div>
+    <div id="footer">
+        <div id="leftFoot">
+            <h2>&#169;Tallen Rand</h3>
+        </div>
+        <div id="rightFoot">
+            <button class="button" onClick="window.open('https://www.freecodecamp.com/tallenrand')"><i class="fa fa-free-code-camp" style="font-size:24px"></i></button>
+            <button class="button" onClick="window.open('https://github.com/tallenrand')"><i class="fa fa-github" style="font-size:24px"/></i></button>
+            <button class="button"><i class="fa fa-linkedin" style="font-size:24px"></i></button>
         </div>
     </div>
 
