@@ -108,19 +108,33 @@
         align-items: center;
         justify-content: center;
     }
+    #facePic {
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        width: 200px;
+        height: 200px;
+        background: white;
+        border: 1pt lightgray dashed;
+        border-radius: 50%;
+        display: inside;
+        box-shadow: lightgrey -2pt 3pt;
+        padding: 26px 27px;
+    }
     #circle1, #circle2, #circle3, #circle4, #circle5,
     #circle6, #circle7, #circle8, #circle9 {
-      width: 160px;
-      height: 160px;
-      background: white;
-      border: 1pt black dashed;
-      border-radius: 50%;
-      display: inside;
-      margin: 4px;
-      box-shadow: lightgrey 1pt 1pt;
-      padding: 26px 27px;
-      text-align: center;
-      vertical-align: center;
+        width: 160px;
+        height: 160px;
+        background: white;
+        border: 1pt lightgray dashed;
+        border-radius: 50%;
+        display: inside;
+        margin: 4px;
+        box-shadow: lightgrey -2pt 3pt;
+        padding: 26px 27px;
+        text-align: center;
+        vertical-align: center;
     }
     #logo {
         width: 100px;
@@ -145,7 +159,9 @@
   </div>
   
   <div id="homePage">
-    <img id="face" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/PorfolioPics/Face4.png">
+    <div id="facePic">
+        <img id="face" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/PorfolioPics/Face4.png">
+    </div>
     <div id="homeText">
         <h2>Hello, my name is Tallen. I'm a programmer who likes:</h2>
     </div>
