@@ -194,25 +194,25 @@
         padding: 100px 20px;
         height: 100%;
     }
-    #Home {background-color: red;}
-    #News {background-color: green;}
-    #Contact {background-color: blue;}
-    #About {background-color: orange;}
+    #Name {background-color: red;}
+    #Work {background-color: green;}
+    #About {background-color: blue;}
+    #Resume {background-color: orange;}
 </style>
 
 
 
 <div class="header">
-    <a class="tablink" onclick="openPage('About', this, 'orange')" id="defaultOpen"> Tallen Rand</a>
+    <a id="Name" class="tablink" onclick="openPage('About', this, 'orange')" id="defaultOpen"> Tallen Rand</a>
     <div class="header-right">
       <a class="tablink" onclick="openPage('Home', this, 'red')" href="#Work">Work</a>
-      <a class="tablink" onclick="openPage('News', this, 'green')" href="#about">About</a>
-      <a class="tablink" onclick="openPage('Contact', this, 'blue')" href="#resume">Resume</a>
+      <a class="tablink" onclick="openPage('News', this, 'green')" href="#About">About</a>
+      <a class="tablink" onclick="openPage('Contact', this, 'blue')" href="#Resume">Resume</a>
       <!--class="active"-->
     </div>
   </div>
   
-  <div id="About" class="tabcontent">
+  <div id="Name" class="tabcontent">
     <div id="facePic">
         <img id="face" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/PorfolioPics/Face4.png">
     </div>
@@ -254,17 +254,17 @@
         </div>
     </div>
 </div>
-    <div id="Home" class="tabcontent">
+    <div id="Work" class="tabcontent">
         <h3>Home</h3>
         <p>Home is where the heart is..</p>
       </div>
       
-      <div id="News" class="tabcontent">
+      <div id="About" class="tabcontent">
         <h3>News</h3>
         <p>Some news this fine day!</p>
       </div>
       
-      <div id="Contact" class="tabcontent">
+      <div id="Resume" class="tabcontent">
         <h3>Contact</h3>
         <p>Get in touch, or swing by for a cup of coffee.</p>
       </div>
