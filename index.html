@@ -21,13 +21,9 @@
         background-color: white;
         height: 100%;
         margin: 0;
+        font-family: 'Hepta Slab';
     }
     * {box-sizing: border-box;}
-
-    body { 
-         margin: 0;
-         font-family: 'Hepta Slab';
-    }
 
     .header {
         overflow: hidden;
@@ -36,6 +32,7 @@
         padding-top: 40px;
         max-width: 800px;
         margin: 0 auto;
+        position: fixed;
     }
 
     .header a {
@@ -81,7 +78,7 @@
     }
   
     .header-right {
-        float: none;
+        float: right;
     }
 }
     #homeText {
@@ -106,6 +103,9 @@
         justify-content: center;
         display: block;
         margin: 0 auto;
+        position: fixed;
+        left: 0;
+        bottom: 0;
     }
     #leftFoot {
         float: left;
@@ -191,6 +191,7 @@
     .tabcontent {
         color: white;
         display: none;
+        margin-top: 100px;
         padding: 100px 20px;
         height: 100%;
     }
@@ -201,7 +202,7 @@
 </style>
 
 
-
+<div>
 <div class="header">
     <a class="tablink" onclick="openPage('Name', this, 'red')" id="defaultOpen" href="#Name">Tallen Rand</a>
     <div class="header-right">
@@ -279,7 +280,7 @@
             <button class="button"><i class="fa fa-linkedin" style="font-size:24px"></i></button>
         </div>
     </div>
-
+</div>
 
 
     
