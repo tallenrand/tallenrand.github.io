@@ -31,6 +31,7 @@
         margin: 0 auto;
         z-index: 30;
         overflow: clip;
+        padding: 6px;
     }
 
     .header a {
@@ -176,7 +177,7 @@
         float: none;
         max-width: 800px;
     }
-    #Name {background-color: white;}
+    #Name {background-color: red;}
     #Work {background-color: green;}
     #About {background-color: blue;}
     #Resume {background-color: orange;}
@@ -185,7 +186,7 @@
 
 <div>
 <div class="header">
-    <a class="tablink" onclick="openPage('Name', this, 'white')" id="defaultOpen" href="#Name"><h1 style="margin-top: -5px">Tallen Rand</h1></a>
+    <a class="tablink" onclick="openPage('Name', this, 'red')" id="defaultOpen" href="#Name"><h1 style="margin-top: -5px">Tallen Rand</h1></a>
     <div class="header-right">
       <a class="tablink" onclick="openPage('Work', this, 'green')" href="#Work">Work</a>
       <a class="tablink" onclick="openPage('About', this, 'blue')" href="#About">About</a>
