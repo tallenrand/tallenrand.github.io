@@ -68,6 +68,11 @@
         text-align: justify;
         width: 300px;
     }
+    #workText {
+        margin: 0 auto;
+        width: 600px;
+        text-align: center;
+    }
     h1 {
         color: black;
     }
@@ -197,6 +202,9 @@
         }
     #Work {
         background-color: green;
+        margin: 0 auto;
+        width: 800px;
+        height:800px;
         }
     #About {
         background-color: blue;
@@ -204,6 +212,27 @@
     #Resume {
         background-color: orange;
         }
+    #workImage1 {
+        width: 200px;
+        height: 200px;
+        border: 2pt solid black;
+    }
+    #workImage2 {
+        width: 200px;
+        height: 200px;
+        border: 2pt solid black;
+    }
+    #workImage1 {
+        width: 200px;
+        height: 200px;
+        border: 2pt solid black;
+    }
+    .left {
+        float: left;
+    }
+    .right {
+        float: right;
+    }
 </style>
 
 
@@ -271,8 +300,29 @@
     </div>
 </div>
     <div id="Work" class="tabcontent">
-        <h3>Home</h3>
-        <p>Home is where the heart is..</p>
+        <div id="workText">
+            <h2>My Work</h2>
+            <div id="work">
+                <div class="left" id="workImage1">Image</div>
+                <div class="right" id="workText1">Text</div>
+                    <br>
+                <div class="right" id="workImage2">Image</div>
+                <div class="left" id="workText2">Text</div>
+                    <br>
+                <div class="left" id="workImage3">Image</div>
+                <div class="right" id="workText3">Text</div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="leftFoot">
+                <h4>&#169;Tallen Rand</h4>
+            </div>
+            <div id="rightFoot">
+                <button class="button" onClick="window.open('https://www.freecodecamp.com/tallenrand')"><i class="fa fa-free-code-camp" style="font-size:12px"></i></button>
+                <button class="button" onClick="window.open('https://github.com/tallenrand')"><i class="fa fa-github" style="font-size:12px"></i></button>
+                <button class="button"><i class="fa fa-linkedin" style="font-size:12px"></i></button>
+            </div>
+        </div>
       </div>
       
       <div id="About" class="tabcontent">
