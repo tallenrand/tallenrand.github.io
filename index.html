@@ -26,8 +26,7 @@
     * {box-sizing: border-box;}
     
     #bodyOfSite{
-        z-index: 10;
-        margin-top: 40px;
+        z-index: 40;
     }
 
     .header {
@@ -37,6 +36,10 @@
         z-index: 30;
         overflow: clip;
         padding: 6px;
+        line-height: 16px;
+        border-radius: 4px;
+        text-decoration: none;
+        margin-top: 40px;
     }
     .header a {
         float: left;
@@ -46,8 +49,7 @@
         text-decoration: none;
         font-size: 12px; 
         line-height: 16px;
-        border-radius: 4px;
-        overflow: clip;
+        border-radius: 4px;       
     }
 
     .header a:hover {
@@ -59,8 +61,25 @@
         color: white;
     }
 
+    .header-left {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 6px;
+        text-decoration: none;
+        font-size: 12px; 
+        line-height: 16px;
+        border-radius: 4px;      
+    }
     .header-right {
         float: right;
+        color: black;
+        text-align: center;
+        padding: 6px;
+        text-decoration: none;
+        font-size: 12px; 
+        line-height: 16px;
+        border-radius: 4px;    
     }
 
     #homeText {
@@ -72,6 +91,7 @@
         margin: 0 auto;
         width: 700px;
         text-align: center;
+        overflow: auto;
     }
     h1 {
         color: black;
@@ -90,6 +110,11 @@
     h4 {
         color: black;
         font-size: 10px;
+    }
+    h5 {
+        color: black;
+        font-size: 14px;
+        margin: 10em;
     }
     #footer {
         max-width: 500px;
@@ -188,7 +213,7 @@
         display: flex;
         color: white;
         display: none;
-        height: 100%;
+        
         margin: 0 auto;
         align-items: center;
         justify-content: center;
@@ -203,9 +228,6 @@
         }
     #Work {
         background-color: white;
-        margin: 0 auto;
-        width: 800px;
-        height:800px;
         }
     #About {
         background-color: blue;
@@ -228,15 +250,17 @@
 
 
 <div id="bodyOfSite">
-<div class="header">
-    <a class="tablink" onclick="openPage('Name', this, 'white')" id="defaultOpen" href="#Name"><h1 style="margin-top: -5px">Tallen Rand</h1></a>
-    <div class="header-right">
-      <a class="tablink" onclick="openPage('Work', this, 'white')" href="#Work">Work</a>
-      <a class="tablink" onclick="openPage('About', this, 'blue')" href="#About">About</a>
-      <a class="tablink" onclick="openPage('Resume', this, 'orange')" href="#Resume">Resume</a>
+    <div class="header">
+        <div id="header-left">
+            <a class="tablink" onclick="openPage('Name', this, 'white')" id="defaultOpen" href="#Name"><h1 style="margin-top: -5px">Tallen Rand</h1></a>
+        </div>
+        <div class="header-right">
+            <a class="tablink" onclick="openPage('Work', this, 'white')" href="#Work">Work</a>
+            <a class="tablink" onclick="openPage('About', this, 'blue')" href="#About">About</a>
+            <a class="tablink" onclick="openPage('Resume', this, 'orange')" href="#Resume">Resume</a>
       <!--class="active"-->
+        </div>
     </div>
-  </div>
   
   <div id="Name" class="tabcontent">
     <div id="homeText">
@@ -279,17 +303,19 @@
             <img id="logo" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F104.244.122.169%2F~diylogodesigns%2Fwp-content%2Fuploads%2F2017%2F07%2Fjava-logo-vector.png&f=1&nofb=1">
         </div>
     </div>
-    <div id="footer">
-        <div id="leftFoot">
-            <h4>&#169;Tallen Rand</h4>
-        </div>
-        <div id="rightFoot">
-            <button class="button" onClick="window.open('https://www.freecodecamp.com/tallenrand')"><i class="fa fa-free-code-camp" style="font-size:12px"></i></button>
-            <button class="button" onClick="window.open('https://github.com/tallenrand')"><i class="fa fa-github" style="font-size:12px"></i></button>
-            <button class="button"><i class="fa fa-linkedin" style="font-size:12px"></i></button>
+        <div id="footer">
+            <div id="leftFoot">
+                <h4>&#169;Tallen Rand</h4>
+            </div>
+            <div id="rightFoot">
+                <button class="button" onClick="window.open('https://www.freecodecamp.com/tallenrand')"><i class="fa fa-free-code-camp" style="font-size:12px"></i></button>
+                <button class="button" onClick="window.open('https://github.com/tallenrand')"><i class="fa fa-github" style="font-size:12px"></i></button>
+                <button class="button"><i class="fa fa-linkedin" style="font-size:12px"></i></button>
+            </div>
         </div>
     </div>
-</div>
+
+    
     <div id="Work" class="tabcontent">
         <div id="workText">
             <h2>My Work</h2>
@@ -299,6 +325,8 @@
                     <img style="height: 400px" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/PorfolioPics/Screenshot_20200423-182355.jpg">
                     <img style="height: 400px" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/PorfolioPics/Screenshot_20200423-182337.jpg">
                 </div>
+                <h5 style="margin: 10px">These screenshots are of an app I made in Android Studio, using Java. It is a money management app called <i>Budget Friend</i> and can be found
+                    on Google Play: <a href="https://play.google.com/store/apps/details?id=com.tallen.sqliteexample&hl=en"  target="_blank"> Budget Friend:)</a></h5>
                 <img style="width: 700px" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/PorfolioPics/GNNScreenshot.PNG">
                 <img style="width: 700px" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Cert_Image.PNG">
                 <p class="codepen" data-height="498" data-theme-id="light" data-default-tab="result" data-user="tallenrand" data-slug-hash="ZxpGZX" style="height: 498px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mad Lib">
@@ -370,8 +398,12 @@
             }
             document.getElementById(pageName).style.display = "block";
             elmnt.style.backgroundColor = color;
+            //scrolls above header when page is switched
+            $(document).ready(function(){
+            $(this).scrollTop(0);
+            });
             }
-            document.getElementById("defaultOpen").click(); 
+            document.getElementById("defaultOpen").click();
         </script>
     </body>
 </html>
