@@ -41,7 +41,7 @@ h1 {
 
 h2 {
     font-family: 'Raleway', sans-serif;
-    font-size: 26px;
+    font-size: 30px;
 }
 h3 {
     font-family: 'Raleway', sans-serif;
@@ -56,11 +56,17 @@ h3 {
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {
-  padding: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 2px;
 }
 .row2,
 .row2 > .column2 {
-  padding: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 4px;
 }
 
 /* Create four equal columns that floats next to each other */
@@ -72,7 +78,7 @@ h3 {
 .column2 {
   float: left;
   width: 25%;
-  margin-top: -18px;
+  
 }
 
 /* Clear floats after rows */ 
@@ -128,10 +134,11 @@ img {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 1px;
-  padding-bottom: 10px;
+  padding-bottom: 4px;
   border-radius: 20px;
   box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   text-align: center;
+  
 }
 .content4 {
   background-color: white;
@@ -199,8 +206,17 @@ img {
         border-style: solid;
         border-radius: 50%;
     }
+    #box {
+        width: 1020px;
+        height: 720px;
+        margin: 0 auto;
+        border: 2pt black solid;
+        border-radius: 20px;
+        padding: 10px;
+    }
 </style>
 
+<!--<div id="box">-->
 <div class="main">
     <div class="content3">
         <h2>Tallen Rand</h2>
@@ -270,13 +286,12 @@ img {
       <!-- END GRID -->
       </div>
 
-      <div class="content4">
+      <!--<div class="content4">
         <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/STThinking.png" alt="Bear" style="width:100%">
         <h3></h3>
         <p></p>
-      </div>
+      </div>-->
     
-    <br>
 
       <div class="content5">
         <button class="button" onClick="window.open('https://www.freecodecamp.com/tallenrand')"><i class="fa fa-free-code-camp" style="font-size:12px"></i></button>
@@ -284,7 +299,7 @@ img {
         <button class="button"><i class="fa fa-linkedin" style="font-size:12px"></i></button>
       </div>
 </div>
-
+<!--</div>-->
 
     
       <script>
