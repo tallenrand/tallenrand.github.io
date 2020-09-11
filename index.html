@@ -10,241 +10,207 @@
             <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@700&display=swap" rel="stylesheet">  
+            <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@700&display=swap" rel="stylesheet">
+            <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
         </head>
 <body>
 <style>
-    html { 
-        font-size: 100%;
-    }
-    body {
-        background-color: white;
-        height: 100%;
-        margin: 0;
-        font-family: 'Hepta Slab';
-    }
-    * {box-sizing: border-box;}
-    
-    #bodyOfSite{
-        z-index: 40;
-    }
+    =transition($transition-property, $transition-time, $method)
+	-webkit-transition: $transition-property $transition-time $method
+	-moz-transition: $transition-property $transition-time $method
+	transition: $transition-property $transition-time $method
 
-    .header {
-        background-color: white;
-        max-width: 800px;
-        margin: 0 auto;
-        z-index: 30;
-        overflow: clip;
-        padding: 6px;
-        line-height: 16px;
-        border-radius: 4px;
-        text-decoration: none;
-        margin-top: 40px;
-    }
-    .header a {
-        float: left;
-        color: black;
-        text-align: center;
-        padding: 6px;
-        text-decoration: none;
-        font-size: 12px; 
-        line-height: 16px;
-        border-radius: 4px;       
-    }
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
 
-    .header a:hover {
-        color: gray;
-    }
+body
+	font-family: 'Lato', sans-serif
+	font-weight: 300
+	line-height: 1.5
+	color: #333
 
-    .header a.active {
-        background-color: black;
-        color: white;
-    }
+a
+	color: #fff
 
-    .header-left {
-        float: left;
-        color: black;
-        text-align: center;
-        padding: 6px;
-        text-decoration: none;
-        font-size: 12px; 
-        line-height: 16px;
-        border-radius: 4px;      
-    }
-    .header-right {
-        float: right;
-        color: black;
-        text-align: center;
-        padding: 6px;
-        text-decoration: none;
-        font-size: 12px; 
-        line-height: 16px;
-        border-radius: 4px;    
-    }
+.row
+	width: 100%
+	max-width: 1170px
+	margin: 0 auto
+	padding: 0
+	clear: both
 
-    #homeText {
-        margin: 0 auto;
-        text-align: justify;
-        width: 300px;
-    }
-    #workText {
-        margin: 0 auto;
-        width: 700px;
-        text-align: center;
-        overflow: auto;
-    }
-    h1 {
-        color: black;
-    }
-    h1:hover {
-        color: gray;
-    }
-    h2 {
-        color: black;
-        font-size: 18px;
-    }
-    h3 {
-        color: black;
-        font-size: 10px;
-    }
-    h4 {
-        color: black;
-        font-size: 10px;
-    }
-    h5 {
-        color: black;
-        font-size: 14px;
-        margin: 10em;
-    }
-    #footer {
-        max-width: 500px;
-        align-items: center;
-        justify-content: center;
-        display: block;
-        margin: 0 auto;
-        left: 0;
-        bottom: 0;
-        float: bottom;
-    }
-    #leftFoot {
-        float: left;
-        max-width: 800px;
-    }
-    #rightFoot {
-        float: right;
-    }
-    #face {
-        width: 180px;
-    }
-    #circles, #circles2, #circles3 {
-        margin: 0 auto;
-        text-align: center;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    #facePic {
-        display: flex;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        width: 200px;
-        height: 200px;
-        background: white;
-        border: 1pt lightgray dashed;
-        border-radius: 50%;
-        display: inside;
-        box-shadow: lightgrey -2pt 3pt;
-        padding: 0px;
-    }
-    #circle1, #circle2, #circle3, #circle4, #circle5,
-    #circle6, #circle7, #circle8, #circle9 {
-        width: 160px;
-        height: 160px;
-        background: white;
-        border: 1pt lightgray dashed;
-        border-radius: 50%;
-        display: inside;
-        margin: 4px;
-        box-shadow: lightgrey -2pt 3pt;
-        padding: 26px 27px;
-        text-align: center;
-        vertical-align: center;
-    }
-    #logo {
-        width: 100px;
-        height: 100px;
-        text-align: center;
-        vertical-align: center;
-        margin: 0 auto;
-    }
-    .button {
-        padding: 8px 8px;
-        outline: none;
-        width: 35px;
-        background-color: white;
-        box-shadow: 2pt 2pt white;
-        border-color: white;
-        background: transparent;
-        border-style: solid;
-        border-radius: 50%;
-    }
-    .button:hover {
-        padding: 8px 8px;
-        width: 35px;
-        outline: none;
-        background-color: lightgray;
-        box-shadow: 2pt 2pt white;
-        border-style: solid;
-        border-radius: 50%;
-    }
-    .button:active {
-        padding: 8px 8px;
-        outline: none;
-        width: 35px;
-        background-color: gray;
-        box-shadow: 2pt 2pt white;
-        border-style: solid;
-        border-radius: 50%;
-    }
-    .tabcontent {
-        display: flex;
-        color: white;
-        display: none;
-        
-        margin: 0 auto;
-        align-items: center;
-        justify-content: center;
-        float: none;
-        max-width: 800px;
-    }
-    #Name {
-        background-color: white;
-        }
-    #Name:hover {
-        color: gray;
-        }
-    #Work {
-        background-color: white;
-        }
-    #About {
-        background-color: blue;
-        }
-    #Resume {
-        background-color: orange;
-        }
+	img
+		max-width: 100%
+		height: auto
+		padding: 0
+		margin: 0
 
-    .left {
-        float: left;
-    }
-    .right {
-        float: right;
-    }
-    #bfPics {
-        display: inline;
-    }
+
+%col
+	float: left
+	margin: 0 0.8771929824561403%
+	overflow: hidden
+
+// HEADER
+header
+	background-color: #84b4b1
+	color: #fff
+	text-align: center
+	padding: 30px 0 120px
+
+	h1
+		text-align: center
+		text-transform: uppercase
+		font-size: 65px
+		font-weight: 400
+		letter-spacing: 3px
+		line-height: .8
+		padding-top: 50px
+		font-family: 'Montserrat', sans-serif
+
+		span
+			text-transform: uppercase
+			letter-spacing: 7px
+			font-size: 25px
+			line-height: 1
+
+	p
+		padding-top: 30px
+
+
+// PROJECTS
+.gallery
+	padding: 40px 0 300px
+	position: relative
+	overflow: hidden
+	
+	ul
+		padding-top: 50px
+		position: relative
+		
+		li
+			@extend %col
+			margin-bottom: 20px
+			width: 23.24561403508772%
+			position: relative
+
+			a
+				display: block
+				position: relative
+				width: 100%
+				height: 100%
+				margin: 0
+				padding: 0
+				line-height: 0
+
+				&:before
+					position: absolute
+					width: 32px
+					height: 32px
+					top: 40%
+					left: 50%
+					margin: -14px 0 0 -16px
+					background: url(data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0A%3Csvg%20version%3D%221.1%22%0A%09%20id%3D%22svg2%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Asodipodi%3D%22http%3A//sodipodi.sourceforge.net/DTD/sodipodi-0.dtd%22%20xmlns%3Ainkscape%3D%22http%3A//www.inkscape.org/namespaces/inkscape%22%20inkscape%3Aversion%3D%220.48.4%20r9939%22%20sodipodi%3Adocname%3D%22icon-fullscreen.svg%22%0A%09%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20960%20560%22%0A%09%20enable-background%3D%22new%200%200%20960%20560%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Csodipodi%3Anamedview%20%20borderopacity%3D%221%22%20pagecolor%3D%22%23ffffff%22%20bordercolor%3D%22%23666666%22%20objecttolerance%3D%2210%22%20gridtolerance%3D%2210%22%20guidetolerance%3D%2210%22%20showgrid%3D%22false%22%20fit-margin-top%3D%220%22%20fit-margin-left%3D%220%22%20inkscape%3Azoom%3D%227.375%22%20inkscape%3Acx%3D%22-5.1525424%22%20inkscape%3Acy%3D%2216%22%20id%3D%22namedview11%22%20inkscape%3Awindow-x%3D%22-8%22%20inkscape%3Awindow-y%3D%22-8%22%20fit-margin-right%3D%220%22%20inkscape%3Apageopacity%3D%220%22%20fit-margin-bottom%3D%220%22%20inkscape%3Awindow-width%3D%221366%22%20inkscape%3Awindow-height%3D%22706%22%20inkscape%3Awindow-maximized%3D%221%22%20inkscape%3Apageshadow%3D%222%22%20inkscape%3Acurrent-layer%3D%22svg2%22%3E%0A%09%3C/sodipodi%3Anamedview%3E%0A%3Cg%3E%0A%09%3Crect%20x%3D%22220%22%20y%3D%22260%22%20fill%3D%22%23FFFFFF%22%20width%3D%22536%22%20height%3D%2224%22/%3E%0A%3C/g%3E%0A%3Cg%3E%0A%09%3Crect%20x%3D%22476%22%20y%3D%224%22%20fill%3D%22%23FFFFFF%22%20width%3D%2224%22%20height%3D%22556%22/%3E%0A%3C/g%3E%0A%3C/svg%3E%0A) no-repeat
+					content: ''
+					opacity: 0
+					z-index: 1
+					@include transition(all, 0.3s, linear)
+
+				&:hover:before
+					top: 50%
+					opacity: 1
+
+				&:after
+					position: absolute
+					width: 100%
+					top: 0
+					bottom: 0
+					background: rgba(0, 0, 0, 0.3)
+					content: ''
+					opacity: 0
+					@include transition(all, 0.3s, linear)
+					
+
+				&:hover:after
+					opacity: 1
+					
+
+
+
+
+// PORT
+.port
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	padding-top: 100px
+	background: #ffffff
+	background-color: #fafafa
+	z-index: 103
+	visibility: hidden
+	-webkit-transform: translateY(-100%)
+	transform: translateY(-100%)
+	border-bottom: 1px solid #d0d0d0
+	+transition(all, 0.5s, ease-in-out)
+
+	img
+		width: 50%
+
+	.description
+		float: left
+		width: 50%
+		max-height: 100%
+		padding: 0 40px 40px
+		overflow: auto
+
+	h1
+		font-size: 35px
+		line-height: 2.3
+		padding: 0
+
+	>*
+		opacity: 0
+		+transition(all, 0.5s, linear)
+
+	&.item_open
+		visibility: visible
+		-webkit-transform: translateY(0%)
+		transform: translateY(0%)
+		+transition(all, 0.4s, ease-in-out)
+
+	> *
+		opacity: 1
+		-webkit-transition-delay: 0.5s
+		transition-delay: 0.5s
+
+
+
+
+.close
+	width: 21px
+	height: 21px
+	background: url(data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0A%3Csvg%20version%3D%221.1%22%0A%09%20id%3D%22svg2%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%09%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2021%2021%22%0A%09%20enable-background%3D%22new%200%200%2021%2021%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%20id%3D%22layer1%22%20transform%3D%22translate%280%2C-1031.3622%29%22%3E%0A%09%3Cpath%20id%3D%22path2987%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20d%3D%22M0%2C1031.4l21%2C21%22/%3E%0A%09%3Cpath%20id%3D%22path2989%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20d%3D%22M21%2C1031.4l-21%2C21%22/%3E%0A%3C/g%3E%0A%3C/svg%3E%0A%0A) no-repeat
+	position: absolute
+	right: 10px
+	top: -121px
+	opacity: 1
+	z-index: 1004
+	+transition(all, 0.1s, ease-in-out)
+
+	.item_open &
+		opacity: 1
+		top: 0px
+		+transition(all, 0.3s, ease-in-out)
+
+
 
 </style>
 
@@ -263,45 +229,85 @@
     </div>
   
   <div id="Name" class="tabcontent">
-    <div id="homeText">
-    <div id="facePic">
-        <img id="face" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/PorfolioPics/Face4.png">
-    </div>
-        <h2>Hello, my name is Tallen. I'm a programmer who likes:</h2>
-    </div>
-        <br>
-    <div id="circles">
-        <div id="circle1">
-            <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/181px-Blender_logo_no_text.svg.png">
-        </div>
-        <div id="circle2">
-            <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/UE_Logo_Black_Centered.svg/1200px-UE_Logo_Black_Centered.svg.png">
-        </div>
-        <div id="circle3">
-            <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png">
-        </div>
-    </div>
-    <div id="circles2">
-        <div id="circle4">
-            <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/800px-ISO_C%2B%2B_Logo.svg.png">
-        </div>
-        <div id="circle5">
-            <img id="logo" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fblog.codepen.io%2Fwp-content%2Fuploads%2F2012%2F06%2FButton-Fill-Black-Large.png&f=1&nofb=1">
-        </div>
-        <div id="circle6">
-            <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/1200px-Adobe_Illustrator_CC_icon.svg.png">
-        </div>
-    </div>
-    <div id="circles3">
-        <div id="circle7">
-            <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Visual_Studio_2017_Logo.svg/1024px-Visual_Studio_2017_Logo.svg.png">
-        </div>
-        <div id="circle8">
-            <img id="logo" src="https://awesomecontentcreator.com/wp-content/uploads/2018/09/adobe-photoshop-cc-logo.png">
-        </div>
-        <div id="circle9">
-            <img id="logo" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F104.244.122.169%2F~diylogodesigns%2Fwp-content%2Fuploads%2F2017%2F07%2Fjava-logo-vector.png&f=1&nofb=1">
-        </div>
+    <div id="top"></div>
+<section class="gallery">
+	<div class="row">
+		<ul>
+			<a href="#" class="close"></a>
+			<li>
+				<a href="#item02">
+					<img src="https://cdn.dribbble.com/users/545884/screenshots/3981307/lorena2.png" alt="">
+				</a>
+			</li>
+
+			<li>
+				<a href="#item02">
+					<img src="https://cdn.dribbble.com/users/545884/screenshots/3892302/contact.png" alt="">
+				</a>
+			</li>
+
+			<li>
+				<a href="#item02">
+					<img src="https://cdn.dribbble.com/users/545884/screenshots/4154721/dive--001.png" alt="">
+				</a>
+			</li>
+			<li>
+				<a class="image" href="#item01">
+					<img src="https://cdn.dribbble.com/users/545884/screenshots/4356121/darko--dr.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a class="image" href="#item02">
+					<img src="https://cdn.dribbble.com/users/545884/screenshots/3695553/news.png" alt="">
+				</a>
+			</li>
+			<li>
+				<a class="image" href="#item01">
+					<img src="https://cdn.dribbble.com/users/545884/screenshots/4360101/liberosis_--_12.png" alt="">
+				</a>
+			</li>
+			<li>
+				<a class="image" href="#item01">
+					<img src="https://cdn.dribbble.com/users/545884/screenshots/3148799/technical-book.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a class="image" href="#item01">
+					<img src="https://cdn.dribbble.com/users/545884/screenshots/2883479/cover.jpg" alt="">
+				</a>
+			</li>
+		</ul>
+	</div> <!-- / row -->
+
+	<!-- Item 01 -->
+	<div id="item01" class="port">
+	
+		<div class="row">
+			<div class="description">
+				<h1>Item 01</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+			</div>
+
+				<img src="https://cdn.dribbble.com/users/545884/screenshots/3981307/lorena2.png" alt="">
+			</div>
+		</div> <!-- / row -->
+
+	</div> <!-- / Item 02 -->
+
+	<!-- Item 02 -->
+	<div id="item02" class="port">
+	
+		<div class="row">
+			<div class="description">
+				<h1>Item 02</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+			</div>
+			<img src="https://cdn.dribbble.com/users/545884/screenshots/2883479/cover.jpg" alt="">
+		</div> <!-- / row -->
+
+	</div> <!-- / Item 02 -->
+
+</section> <!-- / projects -->
     </div>
         <div id="footer">
             <div id="leftFoot">
