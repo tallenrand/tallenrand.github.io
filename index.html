@@ -4,18 +4,12 @@
             <title>Rand Portfolio</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-            <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-            <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@700&display=swap" rel="stylesheet">
-            <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+            <link href="https://fonts.googleapis.com/css2?family=Butcherman&display=swap" rel="stylesheet"> 
+            <link href="https://fonts.googleapis.com/css2?family=Butcherman&family=Raleway:wght@500&display=swap" rel="stylesheet">
         </head>
 <body>
 <style>
-    * {
+   * {
   box-sizing: border-box;
 }
 
@@ -36,18 +30,34 @@ h1 {
   word-break: break-all;
 }
 
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+}
+
 .row {
   margin: 8px -16px;
 }
-
+.row2 {
+  margin: 8px -16px;
+}
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {
   padding: 8px;
 }
+.row2,
+.row2 > .column2 {
+  padding: 8px;
+}
 
 /* Create four equal columns that floats next to each other */
 .column {
+  float: left;
+  width: 25%;
+}
+
+.column2 {
   float: left;
   width: 25%;
 }
@@ -58,191 +68,131 @@ h1 {
   display: table;
   clear: both;
 }
-
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 /* Content */
 .content {
   background-color: white;
-  padding: 10px;
+  padding: 14px;
+  height: 300px;
+  text-align: center;
 }
-
+.content2 {
+  background-color: white;
+  padding: 14px;
+  height: 300px;
+  text-align: center;
+}
+.content3 {
+  background-color: white;
+  padding-left: 20px;
+  padding-top: 1px;
+  padding-bottom: 10px;
+}
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
   .column {
     width: 50%;
   }
 }
-
+@media screen and (max-width: 900px) {
+  .column2 {
+    width: 50%;
+  }
+}
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
   }
 }
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 100%;
+  }
+}
 </style>
 
-
-<div id="bodyOfSite">
-    <div class="header">
-        <div id="header-left">
-            <a class="tablink" onclick="openPage('Name', this, 'white')" id="defaultOpen" href="#Name"><h1 style="margin-top: -5px">Tallen Rand</h1></a>
-        </div>
-        <div class="header-right">
-            <a class="tablink" onclick="openPage('Work', this, 'white')" href="#Work">Work</a>
-            <a class="tablink" onclick="openPage('About', this, 'blue')" href="#About">About</a>
-            <a class="tablink" onclick="openPage('Resume', this, 'orange')" href="#Resume">Resume</a>
-      <!--class="active"-->
-        </div>
-    </div>
-  
-  <div id="Name" class="tabcontent">
+<div class="main">
+    <div class="content3">
+        <h2>Tallen Rand</h2>
+        <p>Web-developer; Motion Graphics Artist; Video Game Programmer</p>
+      </div>
     <div class="row">
         <div class="column">
           <div class="content">
-            <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
-            <h3>My Work</h3>
-            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+            <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/ChessTitle.png" alt="Mountains" style="width:200px; height:150px">
+            <h3>Motion Graphics</h3>
+            <p>Adobe After Effects, Illustrator, Photoshop</p>
           </div>
         </div>
         <div class="column">
           <div class="content">
-          <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
-            <h3>My Work</h3>
-            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Cert_Image.PNG" alt="Lights" style="width:200px; height:150px">
+            <h3>Game Development</h3>
+            <p>Unreal Engine 4, Blender</p>
           </div>
         </div>
         <div class="column">
           <div class="content">
-          <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
-            <h3>My Work</h3>
-            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/HeroShip1.png" alt="Nature" style="width:200px; height:150px">
+            <h3>Web Development</h3>
+            <p>Visual Studio Code, Atom, Codepen, Github</p>
           </div>
         </div>
         <div class="column">
           <div class="content">
-          <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
-            <h3>My Work</h3>
-            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Logos/EAS_F.png" alt="Mountains" style="width:200px; height:150px">
+            <h3>Tutorials</h3>
+            <p>Educational coding projects</p>
           </div>
         </div>
       <!-- END GRID -->
       </div>
       
-      <div class="content">
-        <img src="/w3images/p3.jpg" alt="Bear" style="width:100%">
+      <div class="row2">
+        <div class="column2">
+          <div class="content2">
+            <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/ChessTitle.png" alt="Mountains" style="width:200px; height:150px">
+            <h3>Certificates</h3>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          </div>
+        </div>
+        <div class="column2">
+          <div class="content2">
+          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Cert_Image.PNG" alt="Lights" style="width:200px; height:150px">
+            <h3>Resume</h3>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          </div>
+        </div>
+        <div class="column2">
+          <div class="content2">
+          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/HeroShip1.png" alt="Nature" style="width:200px; height:150px">
+            <h3>About Me</h3>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          </div>
+        </div>
+        <div class="column2">
+          <div class="content2">
+          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Logos/EAS_F.png" alt="Mountains" style="width:200px; height:150px">
+            <h3>Contact</h3>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          </div>
+        </div>
+      <!-- END GRID -->
+      </div>
+
+      <div class="content2">
+        <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/STThinking.png" alt="Bear" style="width:100%">
         <h3>Some Other Work</h3>
         <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
         <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
       </div>
-    </div>
-        <div id="footer">
-            <div id="leftFoot">
-                <h4>&#169;Tallen Rand</h4>
-            </div>
-            <div id="rightFoot">
-                <button class="button" onClick="window.open('https://www.freecodecamp.com/tallenrand')"><i class="fa fa-free-code-camp" style="font-size:12px"></i></button>
-                <button class="button" onClick="window.open('https://github.com/tallenrand')"><i class="fa fa-github" style="font-size:12px"></i></button>
-                <button class="button"><i class="fa fa-linkedin" style="font-size:12px"></i></button>
-            </div>
-        </div>
-    </div>
-
     
-    <div id="Work" class="tabcontent">
-        <div id="workText">
-            <h2>My Work</h2>
-            <div id="work">
-                <div id="bfPics">
-                    <img style="height: 400px" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/PorfolioPics/Screenshot_20200423-182327.jpg">
-                    <img style="height: 400px" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/PorfolioPics/Screenshot_20200423-182355.jpg">
-                    <img style="height: 400px" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/PorfolioPics/Screenshot_20200423-182337.jpg">
-                </div>
-                    <h5 style="margin: 10px">These screenshots are of an app I made in Android Studio, using Java. It is a money management app called <i>Budget Friend</i> and can be found
-                    on Google Play: <a href="https://play.google.com/store/apps/details?id=com.tallen.sqliteexample&hl=en" target="_blank"> Budget Friend:)</a></h5>
-
-                <img style="width: 700px" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/PorfolioPics/GNNScreenshot.PNG">
-                    <h5 style="margin: 10px">This is a small video game I made for PC using Unreal Engine 4 and Blender. It is called <i>Goodbye, Net Neutrality</i> and can be found
-                    on Itch.io: <a href="https://randocalrissian.itch.io/goodbye-net-neutrality" target="_blank"> Goodbye, Net Neutrality</a></h5>
-                    <br>
-
-                <img style="width: 700px" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Cert_Image.PNG">
-                    <h5 style="margin: 10px">While teaching my 5th graders how to code, I earned my Front End Development certificate from <i>freeCodeCamp.org</i>. 
-                    The link to verify this certificate can be found here: <a href="https://www.freecodecamp.org/certification/tallenrand/legacy-front-end" target="_blank"> Rand, Front End Development.</a>
-                    Also, feel free to check out my freeCodeCamp porfolio: <a href="https://www.freecodecamp.org/tallenrand" target="_blank">Rand Porfolio</a></h5>   
-                    <br>
-
-                <p class="codepen" data-height="498" data-theme-id="light" data-default-tab="result" data-user="tallenrand" data-slug-hash="ZxpGZX" style="height: 498px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mad Lib">
-                    <span>See the Pen <a href="https://codepen.io/tallenrand/pen/ZxpGZX">
-                    Mad Lib</a> by Tallen Rand (<a href="https://codepen.io/tallenrand">@tallenrand</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                  <h5 style="margin: 10px">I challenged my 5th graders to make small web apps; this is an example of a Mad Lib we made using <a href="https://codepen.io/" target="_blank">codepen.io</a>. You can also click in the top-right corner of the app to view my code.</h5>
-                  <br>
-
-                  <p class="codepen" data-height="624" data-theme-id="light" data-default-tab="result" data-user="tkrand" data-slug-hash="dmyXbe" style="height: 624px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Small Quote Machine">
-                    <span>See the Pen <a href="https://codepen.io/tkrand/pen/dmyXbe">
-                    Small Quote Machine</a> by Tallen Rand (<a href="https://codepen.io/tkrand">@tkrand</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                  <h5 style="margin: 10px">This random quote machine was required for my Front End Development certificate. My 5th graders each made their own with their Chromebooks and <a href="https://codepen.io/" target="_blank">codepen.io</a>.</h5>
-                  <br>
-                  
-                  <p class="codepen" data-height="644" data-theme-id="light" data-default-tab="result" data-user="tkrand" data-slug-hash="BqMbvN" style="height: 644px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Solar System Model">
-                    <span>See the Pen <a href="https://codepen.io/tkrand/pen/BqMbvN">
-                    Solar System Model</a> by Tallen Rand (<a href="https://codepen.io/tkrand">@tkrand</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                  <h5 style="margin: 10px">I made this model of the Solar System during our Space unit. I wanted to show my students how to make assets in Blender, store them in GitHub, and reference them in codepen.</h5>
-                  <br>
-
-                  <p class="codepen" data-height="531" data-theme-id="light" data-default-tab="result" data-user="tallenrand" data-slug-hash="bQJddz" style="height: 531px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Save the Rainforest">
-                    <span>See the Pen <a href="https://codepen.io/tallenrand/pen/bQJddz">
-                    Save the Rainforest</a> by Tallen Rand (<a href="https://codepen.io/tallenrand">@tallenrand</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                  <h5 style="margin: 10px">This Rainforest webpage is an example of the types of coding projects my 5th graders would make in ELA. We would often write books using <a href="https://www.storyjumper.com/" target="_blank">Story Jumper</a> and embed them into our codepens.</h5>
-                  <br>
-
-                <img style="width: 700px" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/ShipGameExample.png">
-                <img style="width: 700px" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Classroom/Book1_F.png">
-                <h5 style="margin: 10px">These images show one of the games that we made during my after-school Blender Club. This game required python scripting, which was a challenge to teach to 4th and 5th graders.
-                    I also printed .pdf tutorials for my students, which can be found on GitHub: <a href="https://github.com/tallenrand/PublicFiles/tree/master/Make%20a%20Video%20Game%20for%20Free%20-%2010%20Chapters" target="_blank">Blender Game, <a href="https://github.com/tallenrand/PublicFiles/tree/master/HTML%20Pocket%20Guide" target="_blank">HTML Guide</a>. 
-                    I also made YouTube tutorials as well: <a href="https://www.youtube.com/channel/UCv1b4K5EcNqTuA2r0_8AM7w/playlists" target="_blank">Rand Youtube</a>.</h5>
-                  <br>
-
-                <img style="width: 700px" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/RedShip.PNG">
-                <h5 style="margin: 10px">This is a space ship made in Blender; made during Blender Club.</h5>
-                  <br>
-                <img style="width: 700px" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Classroom/Pong_F.png">
-                <img style="width: 700px" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Classroom/Sidescroller_F.PNG">
-                <h5 style="margin: 10px">These images show examples of challenges I would present to my students for extra-credit.</h5>
-                  <br>
-            </div>
-        </div>
-        <div id="footer">
-            <div id="leftFoot">
-                <h4>&#169;Tallen Rand</h4>
-            </div>
-            <div id="rightFoot">
-                <button class="button" onClick="window.open('https://www.freecodecamp.com/tallenrand')"><i class="fa fa-free-code-camp" style="font-size:12px"></i></button>
-                <button class="button" onClick="window.open('https://github.com/tallenrand')"><i class="fa fa-github" style="font-size:12px"></i></button>
-                <button class="button"><i class="fa fa-linkedin" style="font-size:12px"></i></button>
-            </div>
-        </div>
-      </div>
-      
-      <div id="About" class="tabcontent">
-        <h3>News</h3>
-        <p>Some news this fine day!</p>
-      </div>
-      
-      <div id="Resume" class="tabcontent">
-        <h3>Contact</h3>
-        <p>Get in touch, or swing by for a cup of coffee.</p>
-      </div>
+       
 </div>
 
 
