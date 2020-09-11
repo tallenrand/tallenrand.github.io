@@ -6,6 +6,13 @@
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link href="https://fonts.googleapis.com/css2?family=Butcherman&display=swap" rel="stylesheet"> 
             <link href="https://fonts.googleapis.com/css2?family=Butcherman&family=Raleway:wght@500&display=swap" rel="stylesheet">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+            <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+            <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@700&display=swap" rel="stylesheet">  
         </head>
 <body>
 <style>
@@ -14,7 +21,8 @@
 }
 
 body {
-  background-color: #f1f1f1;
+  background-image: radial-gradient(circle, #c9c9c9, #6e6e6e, #333333);
+  /*background-color:#a8a8a8;*/
   padding: 20px;
   font-family: Arial;
 }
@@ -28,13 +36,17 @@ body {
 h1 {
   font-size: 50px;
   word-break: break-all;
+  font-family: 'Raleway', sans-serif;
 }
 
 h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
 }
-
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
 .row {
   margin: 8px -16px;
 }
@@ -60,6 +72,7 @@ h2 {
 .column2 {
   float: left;
   width: 25%;
+  margin-top: -18px;
 }
 
 /* Clear floats after rows */ 
@@ -77,20 +90,63 @@ h2 {
 .content {
   background-color: white;
   padding: 14px;
-  height: 300px;
+  height: 230px;
   text-align: center;
+  border-radius: 20px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.content:hover {
+  background-color: #e0e0e0;
+  padding: 14px;
+  height: 230px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .content2 {
   background-color: white;
   padding: 14px;
-  height: 300px;
+  height: 230px;
   text-align: center;
+  border-radius: 20px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.content2:hover {
+  background-color: #e0e0e0;
+  padding: 14px;
+  height: 230px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+img {
+    border-radius: 10px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .content3 {
   background-color: white;
   padding-left: 20px;
+  padding-right: 20px;
   padding-top: 1px;
   padding-bottom: 10px;
+  border-radius: 20px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  text-align: center;
+}
+.content4 {
+  background-color: white;
+  padding: 14px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.content5 {
+  background-color: white;
+  padding: 1px;
+  padding-left: 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
@@ -114,40 +170,69 @@ h2 {
     width: 100%;
   }
 }
+.button {
+        padding: 8px 8px;
+        outline: none;
+        width: 35px;
+        background-color: white;
+        box-shadow: 0pt 0pt white;
+        border-color: white;
+        background: transparent;
+        border-style: solid;
+        border-radius: 50%;
+    }
+    .button:hover {
+        padding: 8px 8px;
+        width: 35px;
+        outline: none;
+        background-color: lightgray;
+        box-shadow: 0pt 0pt white;
+        border-style: solid;
+        border-radius: 50%;
+    }
+    .button:active {
+        padding: 8px 8px;
+        outline: none;
+        width: 35px;
+        background-color: gray;
+        box-shadow: 0pt 0pt white;
+        border-style: solid;
+        border-radius: 50%;
+    }
 </style>
 
 <div class="main">
     <div class="content3">
         <h2>Tallen Rand</h2>
-        <p>Web-developer; Motion Graphics Artist; Video Game Programmer</p>
+        <p>Project Manager; Database Support Engineer; Web-developer; Motion Graphics Artist; Video Game Programmer</p>
       </div>
     <div class="row">
         <div class="column">
           <div class="content">
-            <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/ChessTitle.png" alt="Mountains" style="width:200px; height:150px">
+            <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/ChessTitle.png" alt="Mountains" style="width:210px; height:150px">
             <h3>Motion Graphics</h3>
-            <p>Adobe After Effects, Illustrator, Photoshop</p>
+            <p></p>
           </div>
         </div>
         <div class="column">
           <div class="content">
-          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Cert_Image.PNG" alt="Lights" style="width:200px; height:150px">
+          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Cert_Image.PNG" alt="Lights" style="width:210px; height:150px">
             <h3>Game Development</h3>
-            <p>Unreal Engine 4, Blender</p>
+            <p></p>
           </div>
         </div>
         <div class="column">
           <div class="content">
-          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/HeroShip1.png" alt="Nature" style="width:200px; height:150px">
+          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/HeroShip1.png" alt="Nature" style="width:210px; height:150px">
             <h3>Web Development</h3>
-            <p>Visual Studio Code, Atom, Codepen, Github</p>
+            <p></p>
           </div>
         </div>
         <div class="column">
           <div class="content">
-          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Logos/EAS_F.png" alt="Mountains" style="width:200px; height:150px">
+          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Logos/EAS_F.png" alt="Mountains" style="width:210px; height:150px">
             <h3>Tutorials</h3>
-            <p>Educational coding projects</p>
+            <p></p>
           </div>
         </div>
       <!-- END GRID -->
@@ -156,43 +241,48 @@ h2 {
       <div class="row2">
         <div class="column2">
           <div class="content2">
-            <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/ChessTitle.png" alt="Mountains" style="width:200px; height:150px">
+            <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/RPG_Example1.PNG" alt="Mountains" style="width:210px; height:150px">
             <h3>Certificates</h3>
-            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+            <p></p>
           </div>
         </div>
         <div class="column2">
           <div class="content2">
-          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Cert_Image.PNG" alt="Lights" style="width:200px; height:150px">
+          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Unicorn%20Friend.png" alt="Lights" style="width:210px; height:150px">
             <h3>Resume</h3>
-            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+            <p></p>
           </div>
         </div>
         <div class="column2">
           <div class="content2">
-          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/HeroShip1.png" alt="Nature" style="width:200px; height:150px">
+          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/BritCar_Example.PNG" alt="Nature" style="width:210px; height:150px">
             <h3>About Me</h3>
-            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+            <p></p>
           </div>
         </div>
         <div class="column2">
           <div class="content2">
-          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Logos/EAS_F.png" alt="Mountains" style="width:200px; height:150px">
+          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/FishPaint.PNG" alt="Mountains" style="width:210px; height:150px">
             <h3>Contact</h3>
-            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+            <p></p>
           </div>
         </div>
       <!-- END GRID -->
       </div>
 
-      <div class="content2">
+      <div class="content4">
         <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/STThinking.png" alt="Bear" style="width:100%">
-        <h3>Some Other Work</h3>
-        <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
-        <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+        <h3></h3>
+        <p></p>
       </div>
     
-       
+    <br>
+
+      <div class="content5">
+        <button class="button" onClick="window.open('https://www.freecodecamp.com/tallenrand')"><i class="fa fa-free-code-camp" style="font-size:12px"></i></button>
+        <button class="button" onClick="window.open('https://github.com/tallenrand')"><i class="fa fa-github" style="font-size:12px"></i></button>
+        <button class="button"><i class="fa fa-linkedin" style="font-size:12px"></i></button>
+      </div>
 </div>
 
 
