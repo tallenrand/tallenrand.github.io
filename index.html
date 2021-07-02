@@ -12,7 +12,8 @@
             <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@700&display=swap" rel="stylesheet">  
+            <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@700&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
         </head>
 <body>
 <style>
@@ -98,7 +99,7 @@ h3 {
   padding: 14px;
   height: 230px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .content:hover {
@@ -106,7 +107,7 @@ h3 {
   padding: 14px;
   height: 230px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .content2 {
@@ -122,7 +123,7 @@ h3 {
   padding: 14px;
   height: 230px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 img {
@@ -135,7 +136,7 @@ img {
   padding-right: 20px;
   padding-top: 1px;
   padding-bottom: 4px;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   text-align: center;
   
@@ -148,11 +149,13 @@ img {
   box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .content5 {
+  max-width: 1000px;
+  margin: auto;
   background-color: white;
   padding: 1px;
   padding-left: 20px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -214,6 +217,9 @@ img {
         border-radius: 20px;
         padding: 10px;
     }
+    
+    .mySlides {display:none;}
+
 </style>
 
 <!--<div id="box">-->
@@ -225,39 +231,39 @@ img {
     <div class="row">
         <div class="column">
           <div class="content">
-            <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/ChessTitle.png" alt="Mountains" style="width:210px; height:150px">
-            <h3>Motion Graphics</h3>
+          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/ChessTitle.png" alt="Mountains" style="width:210px; height:150px">
+            <h3>Digital Projects</h3>
             <p></p>
           </div>
         </div>
         <div class="column">
           <div class="content">
-          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Cert_Image.PNG" alt="Lights" style="width:210px; height:150px">
-            <h3>Game Development</h3>
+            <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Cert_Image.PNG" alt="Lights" style="width:210px; height:150px">
+            <h3>Certificates</h3>
             <p></p>
           </div>
         </div>
         <div class="column">
           <div class="content">
           <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/HeroShip1.png" alt="Nature" style="width:210px; height:150px">
-            <h3>Web Development</h3>
+            <h3>Resume</h3>
             <p></p>
           </div>
         </div>
         <div class="column">
           <div class="content">
           <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Logos/EAS_F.png" alt="Mountains" style="width:210px; height:150px">
-            <h3>Tutorials</h3>
+            <h3>Contact</h3>
             <p></p>
           </div>
         </div>
       <!-- END GRID -->
-      </div>
       
-      <div class="row2">
+      <!--<div class="row2">
         <div class="column2">
           <div class="content2">
-            <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/RPG_Example1.PNG" alt="Mountains" style="width:210px; height:150px">
+          <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/RPG_Example1.PNG" alt="Mountains" style="width:210px; height:150px">
+           
             <h3>Certificates</h3>
             <p></p>
           </div>
@@ -282,14 +288,21 @@ img {
             <h3>Contact</h3>
             <p></p>
           </div>
-        </div>
-      <!-- END GRID -->
-      </div>
+        </div>-->
 
-      <!--<div class="content4">
-        <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/STThinking.png" alt="Bear" style="width:100%">
-        <h3></h3>
-        <p></p>
+
+  <!-- END GRID -->
+</div>
+
+      <div class="content4">
+        <img class="mySlides" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/FishPaint.PNG" style="width:100%">
+        <img class="mySlides" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/FishPaint.PNG" style="width:100%">
+        <img class="mySlides" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/FishPaint.PNG" style="width:100%">
+        <img class="mySlides" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/FishPaint.PNG" style="width:100%">
+      
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+       
       </div>-->
     
 
@@ -297,7 +310,8 @@ img {
         <button class="button" onClick="window.open('https://www.freecodecamp.com/tallenrand')"><i class="fa fa-free-code-camp" style="font-size:12px"></i></button>
         <button class="button" onClick="window.open('https://github.com/tallenrand')"><i class="fa fa-github" style="font-size:12px"></i></button>
         <button class="button"><i class="fa fa-linkedin" style="font-size:12px"></i></button>
-      </div>
+
+
 </div>
 <!--</div>-->
 
@@ -321,6 +335,26 @@ img {
             });
             }
             document.getElementById("defaultOpen").click();
+
+
+            var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
         </script>
     </body>
 </html>
