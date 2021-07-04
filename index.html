@@ -54,6 +54,15 @@ h3 {
 .row2 {
   margin: 8px -16px;
 }
+.row3 {
+  margin: 0px -16px;
+}
+.row4 {
+  margin: 0px -20px;
+}
+.row8 {
+  margin: px 0px;
+}
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {
@@ -66,17 +75,30 @@ h3 {
 .row2 > .column2 {
   padding-left: 8px;
   padding-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 4px;
+  padding-top: 1px;
+  padding-bottom: 2px;
 }
 .row3,
 .row3 > .column3 {
-  padding-left: 5px;
+  padding-left: -10px;
   padding-right: 0px;
-  padding-top: 2px;
-  padding-bottom: 4px;
+  padding-top: 0px;
+  padding-bottom: 2px;
 }
-
+.row4,
+.row4 > .column4 {
+  padding-left: 0px;
+  padding-right: -10px;
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+.row8,
+.row8 > .column8 {
+  padding-left: 16px;
+  padding-right: 26px;
+  padding-top: 0px;
+  padding-bottom: 2px;
+}
 /* Create four equal columns that floats next to each other */
 .column {
   float: left;
@@ -85,15 +107,21 @@ h3 {
 
 .column2 {
   float: left;
-  width: 25%;
-  
+  width: 50%;
+  margin-top: 12px;
 }
 
 .column3 {
   float: right;
-  width: 50%;
+  width: 49%;
+  margin-left: -10px;
 }
-
+.column4 {
+  float: left;
+  width: 25%;
+  margin-left: 16px;
+  margin-right: -18px
+}
 /* Clear floats after rows */ 
 .row:after {
   content: "";
@@ -132,7 +160,7 @@ h3 {
   padding: 14px;
   height: 230px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .content2:hover {
@@ -160,21 +188,39 @@ img {
 }
 .content4 {
   background-color: white;
-  max-width: 500px;
+  max-width: 490px;
   min-height: 300px;
   padding: 14px;
   text-align: center;
   border-radius: 10px;
-  padding-bottom: 4px;
-  margin-bottom: 12px;
   box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .content5 {
   max-width: 1000px;
   margin: auto;
   background-color: white;
-  padding: 1px;
-  padding-left: 20px;
+  padding: 9px;
+  padding-left: 0px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.content6 {
+  max-width: 1000px;
+  margin: auto;
+  height: 50px;
+  margin-top: 0px;
+  background-color: white;
+  padding-top: 1px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.content7 {
+  background-color: white;
+  width: 238px;
+  height: 220px;
+  padding: 14px;
   text-align: center;
   border-radius: 10px;
   box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -202,9 +248,10 @@ img {
   }
 }
 .button {
-        padding: 8px 8px;
+        padding: 0px 0px;
         outline: none;
-        width: 35px;
+        width: 50px;
+        height: 50px;
         background-color: white;
         box-shadow: 0pt 0pt white;
         border-color: white;
@@ -213,8 +260,9 @@ img {
         border-radius: 50%;
     }
     .button:hover {
-        padding: 8px 8px;
-        width: 35px;
+        padding: 0px 0px;
+        width: 50px;
+        height: 50px;
         outline: none;
         background-color: lightgray;
         box-shadow: 0pt 0pt white;
@@ -222,9 +270,10 @@ img {
         border-radius: 50%;
     }
     .button:active {
-        padding: 8px 8px;
+        padding: 0px 0px;
         outline: none;
-        width: 35px;
+        width: 50px;
+        height: 50px;
         background-color: gray;
         box-shadow: 0pt 0pt white;
         border-style: solid;
@@ -316,6 +365,13 @@ img {
       bottom: 0px;
     }
 
+
+
+
+
+
+  
+
 </style>
 
 
@@ -324,7 +380,7 @@ img {
 <div class="main">
     <div class="content3">
         <h2>Tallen Rand</h2>
-        <p>Project Manager; Database Support Engineer; Web-developer; Motion Graphics Artist; Video Game Programmer</p>
+        <p>Database Support Engineer; Web-Developer; Motion Graphics Artist; Video Game Programmer</p>
       </div>
     <div class="row">
         <div class="column">
@@ -351,7 +407,7 @@ img {
         <div class="column">
           <div class="content">
           <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Logos/EAS_F.png" alt="Mountains" style="width:210px; height:150px">
-            <h3>Contact</h3>
+            <h3>About Me</h3>
             <p></p>
           </div>
         </div>
@@ -359,31 +415,65 @@ img {
     </div>
 
     <div class="row3">
-    <div class="column3">
-      <div class="content4">
-        <div class="slideshow-container">
-        <img class="mySlides fade" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/FishPaint.PNG" style="width:100%">
-        <img class="mySlides fade" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/BritCar_Example.PNG" style="width:100%">
-        <img class="mySlides fade" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Unicorn%20Friend.png" style="width:100%">
-        <img class="mySlides fade" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/RPG_Example1.PNG" style="width:100%">
-      </div>
-    </div>
-    </div>
+      <div class="column4">
+          <div class="content7">
+            <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Logos/EAS_F.png" alt="Mountains" style="width:210px; height:150px">
+            <h3>YouTube Channels</h3>
+            <p></p>
+          </div>
+        </div>
+          <div class="column4">
+           <div class="content7">
+            <img src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Logos/EAS_F.png" alt="Mountains" style="width:210px; height:150px">
+              <h3>Contact</h3>
+              <p></p>
+            </div>
+          </div>
+        
+
+      <div class="column3">
+        <div class="content4">
+          <div class="slideshow-container">
+            <img class="mySlides fade" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/FishPaint.PNG" style="width:100%">
+            <img class="mySlides fade" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/BritCar_Example.PNG" style="width:100%">
+            <img class="mySlides fade" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/Unicorn%20Friend.png" style="width:100%">
+            <img class="mySlides fade" src="https://raw.githubusercontent.com/tallenrand/PublicFiles/master/RPG_Example1.PNG" style="width:100%">
+          </div>
+        </div>
+      
 
         <div class="bottomButtons" style="opacity: 0;">
-          <span class="dot"></span> 
-          <span class="dot"></span> 
-          <span class="dot"></span>
-          <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span>
+            <span class="dot"></span> 
+          </div>
         </div>
+
+        <div class="row8">
+          <div class="column2">
+            <div class="content5">
+              <button class="button" onClick="window.open('https://www.freecodecamp.com/tallenrand')"><i class="fa fa-free-code-camp" style="font-size:28px"></i></button>
+              <button class="button" onClick="window.open('https://github.com/tallenrand')"><i class="fa fa-github" style="font-size:28px"></i></button>
+              <button class="button"><i class="fa fa-linkedin" style="font-size:28px"></i></button>
+              <button class="button"><i class="fa fa-youtube" style="font-size:28px"></i></button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-
-      <div class="content5">
-        <button class="button" onClick="window.open('https://www.freecodecamp.com/tallenrand')"><i class="fa fa-free-code-camp" style="font-size:12px"></i></button>
+  
+    <div class="row2">
+     
+      <div class="content6">
+        <p><i>&#169 Tallen Rand, 2021</i></p>
+        <!--<button class="button" onClick="window.open('https://www.freecodecamp.com/tallenrand')"><i class="fa fa-free-code-camp" style="font-size:12px"></i></button>
         <button class="button" onClick="window.open('https://github.com/tallenrand')"><i class="fa fa-github" style="font-size:12px"></i></button>
-        <button class="button"><i class="fa fa-linkedin" style="font-size:12px"></i></button>
+        <button class="button"><i class="fa fa-linkedin" style="font-size:12px"></i></button>-->
       </div>
+    
+  </div>
 
 </div>
 
