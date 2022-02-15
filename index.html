@@ -1,742 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-        <head>
-            <title>Rand Portfolio</title>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link href="https://fonts.googleapis.com/css2?family=Butcherman&display=swap" rel="stylesheet"> 
-            <link href="https://fonts.googleapis.com/css2?family=Butcherman&family=Raleway:wght@500&display=swap" rel="stylesheet">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-            <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-            <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@700&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Amatica+SC|Graduate|Julius+Sans+One|VT323" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Amatica+SC" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-        </head>
-<body>
+<head>
+  <title>Personal Portfolio - Bootstrap 5</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+ 
+<!-- navbar start -->
+<nav class="navbar navbar-light fixed-top bg-light shadow-sm">
+  <div class="container-lg">
+    <a class="navbar-brand text-danger fw-bold fs-4" href="#">USA</a>
+    <div class="dropdown">
+      <button class="btn btn-secondary btn-danger px-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#home">Home</a></li>
+        <li><a class="dropdown-item" href="#about">About</a></li>
+        <li><a class="dropdown-item" href="#services">Services</a></li>
+        <li><a class="dropdown-item" href="#portfolio">Portfolio</a></li>
+        <li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+        <li><a class="dropdown-item" href="#contact">Contact</a></li>
 
-<style>
-  .body {
-  background-color: #9e9e9e;
-  margin: 80px 80px 80px 80px;
-}
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- navbar end -->
 
-#fixedheader {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  color: #96002D;
-  background: #780024;
-  padding: 20px;
-  font-size: 20px;
-  text-align: center;
-  z-index: 30;
-  border-bottom: 1px solid #000;
-}
+<!-- home section start -->
+<section class="home py-5" id="home">
+<div class="container-lg">
+  <!--<p class="text-white">Hello</p>-->
+  <div class="row min-vh-100 align-items-center align-content-center">
+    <div class="col-md-6 mt-5 mt-md-0">
+      <div class="home-img text-center">
+        <img src="img/profile.png" class="rounded-circle mw-100" alt="profile img">
+      </div>
+    </div>
+    <div class="col-md-6 mt-5 mt-md-0 order-md-first">
+      <div class="home-text">
+        <p class="text-muted mb-1">Hello I'm</p>
+        <h1 class="text-danger text-uppercase fs-1 fw-bold">Web Designer</h1>
+        <h2 class="fs-4">Tallen Rand</h2> 
+        <p class="mt-4 text-muted">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+          nisi ut aliquip ex ea commodo consequat."</p>
+          <a href="#portfolio" class="btn btn-danger px-3 mt-3">My Work</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- home section end -->
 
-.gradient {
-  background-image: radial-gradient(#565656, white);
-}
-
-.input, .input-c {
-  float: right;  
-}
-
-.input-l {
-  float: left;
-}
-
-.btn-primary {
-  background-color: #690020;
-  color: white;
-  border: 0pt;
-  border-radius: 25px;
-}
-
-.btn-default:hover,
-.btn-default:focus,
-.btn-default:active {
-   background-color: #565656;
-   color: white;     
-   outline: none;
-}
-
-.hbutton-width {
-  width: 140px !important;
-  margin-left: 10px;
-}
-
-.hbutton-width2 {
-  width: relative !important;
-}
-
-.btn-active1 {
-  background: #4D0017;
-  
-}
-
-    .btn-default1:hover,
-    .btn-default1:focus,
-    .btn-default1:active    
-                        {
-        background-color: #4D0017;
-        color: white;
-
-    }
-
-.background-accent {
-  width: 940px;
-  margin:0 auto;
-  background-image: linear-gradient(to right, #565656, white, #565656);
-  background-color: #c4c4c4;
-  background-color: rgba(196, 196, 196);
-  border-top-style: solid;
-  border-top-width: 40px;
-  border-top-color: #1c3744;
-  border-right-style:solid;
-  border-right-width: 500px;
-  border-right-color: white;
-  border-bottom-style: solid;
-  border-bottom-width: 40px;
-  border-bottom-color: white;
-  border-left-style:solid;
-  border-left-width: 500px;
-  border-left-color: white;
-}
-
-.content {
-  width: 500px;
-  text-align: left;
-}
-
-.text-float {
-  float: right;
-}
-
-.columns-bg { 
-  background-image:
-    width: 1000px;
-  linear-gradient(
-    to right,
-    #565656,
-    #a3a3a3 15%,
-    white 15%,
-    white 85%,
-    #a3a3a3 85%,
-    #565656
-  );
-} 
-
-.container {
-  width: 1000px;
-  margin: 0 auto 0 auto;
-  padding: 0px;
-  border-left: 0px solid black;
-  border-right: 0px solid black;
-  background: white;
-  background-image: linear-gradient(to right, #565656, white, #565656);  }
-
-.h-container {
-  width:900px;
-  margin: 0 auto 0 auto;
-  padding: 1px;
-}
-
-.rectangle {
-  width: 100%; 
-  margin: 0 auto 0 auto;
-  padding: 0px;
-  height: 500px; 
-  border-right: 0px solid #000;
-  border-left: 0px solid #000;
-  background: white;
-  text-align: left;
-}
-
-.rectangle1 {
-  width: 100%; 
-  margin: 0 auto 0 auto;
-  padding: 0px;
-  height: 420px;
-  border-right: 1px solid #000;
-  border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
-  background: #dbdbdb;
-  text-align: left;
-  
-}
-
-.rectangle2 {
-  width: 100%; 
-  margin: 0 auto 0 auto;
-  padding: 0px;
-  height: 1220px;
-  border-top: 0px solid #000;
-  border-right: 1px solid #000;
-  border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
-  background: white;
-}
-
-.rectangle3 {
-  width: 100%; 
-  margin: 0 auto 0 auto;
-  padding: 0px;
-  height: 590px;
-  border-top: 0px solid #000;
-  border-right: 1px solid #000;
-  border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
-  background: #dbdbdb;
-}
-
-.rectangle-demoreel {
-  width: 100%; 
-  margin: 0 auto 0 auto;
-  padding: 0px;
-  height: 700px;
-  border-right: 1px solid #000;
-  border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
-  background: white;
-}
-
-h4 {
-  padding-top: 20px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 10px;
-  text-align: left;
-  font-size: 18px;
-  font-family: Special Elite, cursive;
-  }
-h1 {
-  padding-top: 30px;
-  padding-right: 100px;
-  padding-bottom: 10px;
-  padding-left: 100px;
-  text-align: center;
-  font-size: 80px;
-  font-family: Amatica SC;
-}
-
-h2 {
-  padding-top: 12px;
-  padding-right: 400px;
-  padding-bottom: 1px;
-  padding-left: 100px;
-  text-align: left;
-  font-size: 18px;
-  font-family: Special Elite, cursive;
-}
-.image-settings {
-  border: solid;
-  border-color: gray;
-  border-radius: 50%;
-  width: 250px;
-  margin-top: -250px;
-  margin-right: 50px;  
-}
-
-.image-settings2 {
-  border: solid;
-  border-color: gray;
-  border-radius: 50%;
-  width: 160px;
-  margin-top:5%;
-  margin-right: 24%;
-}
-
-h3 {
-  padding-top: 45px;
-  padding-right: 100px;
-  padding-bottom: 30px;
-  padding-left: 100px;
-  text-align: center;
-  font-size: 70px;
-  font-family: Amatica SC;
-}
-
-h5 {
-  padding-top: 10px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 25px;
-  text-align: left;
-  font-size: 18px;
-  font-family: Special Elite, cursive;
-}
-
-h6 {
-  text-align: center;
-  font-family: Special Elite, cursive;
-  font-size: 20px;
-  margin-top: 40px;
-  margin-right: 80px;
-  margin-bottom: 0px;
-  margin-left: 80px;
-}
-
-.image-portfolio {
-  border: solid;
-  border-color: black;
-  border-width: 1px;
-  width: 180px; 
-  height: 101px;
-}
-
-.image-portfolio:focus,  
-.image-portfolio:active{ 
-    transform: scale(2);
-    transition: 0.4s ease-in-out;
-    margin: 0 auto;
-    width:260px;
-    height:auto;
-    display:inline-block;
-    z-index:1;
-}
-
-  .input3 {
-  display: inline-block;
-    margin: -5px;
-}
-
-.row {
-  text-align: center;
-  
-}
-
-form {
-  text-align: left;
-  margin-left: 50px;
-  text-family: Special Elite, cursive;
-  text-size: 16px;
-}
-
-h7 {  
-  font-family: Special Elite, cursive;
-  font-size: 18px;
-  margin-top: 40px;
-  margin-right: 60px;
-  margin-bottom: 30px;
-  margin-left: 60px;
-}
-
-.email-text {  
-  font-family: Special Elite, cursive;
-  font-size: 16px;
-  margin-top: 10px;
-  margin-right: 0px
-  margin-bottom: 0px;
-  margin-left: 20x;
-}
-
-.h9 {  
-  font-family: Special Elite, cursive;
-  font-size: 16px;
-  text-align: center;
-  color: black;
-}
-
-h10 {  
-  font-family: Amatica SC;
-  font-size: 50px;
-  text-align: center;
-  color: white;
-}
-
-.rectangle4 {
-  width: 100%;
-  text-align:center;
-  font-color: white;
-  margin: 0 auto 0 auto;
-  padding: 0px;
-  height:300px;
-  border-top: 1px solid #000;
-  border-right: 0px solid #000;
-  border-left: 0px solid #000;
-  border-bottom: 1px solid #000;
-  background: #780024;
-}
-
-#fixedfooter {
-  position: bottom;
-  bottom: 0px;
-  right: 0px;
-  width: 100%;
-  color: #780024;
-  background: #780024;
-  padding: 10px;
-  font-size: 20px;
-  text-align: center;
-  z-index: 30;
-} 
-
-h11 {  
-  font-family: Amatica SC;
-  font-size: 24px;
-  text-align: center;
-  color: white;
-}
-
-h12 {
-  font-family: Amatica SC;
-  font-size: 24px;
-  text-align: center;
-  color: black;
-}
-
-</style>
-
-
-
-<!--<div id="box">-->
-
-  <body class="container">
-    <div class="container-fluid"><!--container fluid-->
-      <div id="fixedheader"><!--fixedheader-->
-       <div class="h-container"><!--h-container-->
-        <div class="row"><!--row-->
-         <div class="input"><!--input-->
-         <div class="col-xs-20"><!--col-xs-20-->
-         <a href="#contact"><button class="btn btn-block btn-lg btn-primary btn-default hbutton-width">Contact</button></a>
-           </div><!--col-xs-20-->
-          </div><!--input-->
-         <div class="input"><!--input-->
-         <div class="col-xs-20"><!--col-xs-20-->
-         <a href="#profile"><button class="btn btn-block btn-lg btn-primary btn-default hbutton-width">Portfolio</button></a>
-           </div><!--col-xs-20-->
-          </div><!--input-->
-         <div class="input"><!--input-->
-        <div class="col-xs-20"><!--col-xs-20-->
-        <a href="#demoreel"><button class="btn btn-block btn-lg btn-primary btn-default hbutton-width">Demo Reel</button></a>
-          </div><!--col-xs-20-->
-          </div><!--input-->
-          <div class="input-l">
-            <div style="text-align:left">
-          <a href="#about"><button class="btn btn-block btn-lg btn-primary btn-default hbutton-width">Tallen Rand</button></a>
+<!-- about section start -->
+<section class="about bg-white py-5" id="about">
+  <div class="container-lg py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h2 class="fw-bold mb-5">About Me</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="about-text">
+          <h3 class="fs-4 mb-3">Lorem ipsum dolor sit amet</h3>
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam</p>
+        </div>
+        <div class="row text-center text-uppercase my-3">
+          <div class="col-sm-4">
+            <div clas="fact-item">
+              <h4 class="fs-1 fw-bold">100</h4>
+              <p class="text-muted">Projects Completed</p>
             </div>
           </div>
-        </div><!--row-->
-        </div><!--h-container-->
-      </div><!--fixedheader-->
-   
-      
-   <!--Tallen Rand Intro-->   
-   <div id="about" class="rectangle"><!--close rectangle-->
-     <div style="padding-top: 60px"><!--text padding 80px-->
-       <div class="rectangle1"><!--rec1-->
-         <h1><b>--Tallen Rand --</b></h1>
-         <h2>Game Design and Animation utilizing Blender and Unreal Engine 4.</h2> 
-           <h2>-Web Design utilizing HTML, CSS, and JavaScript.</h2>
-         <h2>-Vector Art, Graphic Design, and Video Editing utilizing Adobe Suite (CS5.5).</h2>
-         <p style="text-align:right;"><img class="image-settings"  src="https://github.com/tallenrand/PublicFiles/blob/master/Tallen_Square.png?raw=true" style="max-width: 100%; height: auto;" alt="Bob Ross with Paints"></p></img>       
-        </div><!--rec1-->
-      </div><!--text padding 80px-->
-    </div><!--Close Rectangle-->
-      
-      <!--Demo Reel Button Class-->
-      <div id="demoreel" style="color:white">
+        <div class="col-sm-4">
+          <div clas="fact-item">
+            <h4 class="fs-1 fw-bold">90</h4>
+            <p class="text-muted">Happy Clients</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div clas="fact-item">
+            <h4 class="fs-1 fw-bold">95</h4>
+            <p class="text-muted">Positive Reviews</p>
+          </div>
+        </div>
       </div>
-      <div class="rectangle-demoreel"><br>
-        <h3>--Demo Reel--</h3>
-        <div style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/HVWR41Mwlf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="row">
+        <div class="col-lg-12 d-flex align-items-center">
+          <a href="#" class="btn px-3 btn-danger me-5">Download CV</a>
+          <div class="social-links">
+            <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-dark me-2"><i class="fab fa-github"></i></a>
+            <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
       </div>
-      
-       <!--Profile button class-->
-       <div id="profile" style="color:white">
-       </div>
-      <div class="rectangle2"><!--Rectangle2-->
-        <br>
-        <h3>--Portfolio--</h3>
-      <!--<h4>Blender/Unreal Engine 4 Projects:</h4>-->
-        <div class="row"><!--row1 BUE4-->
-  <!--ROW 1 START ------------------------------------------------>
-          <div class="input3"><!--input-->
-         <p><img id="pic" onclick="myScript" class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Blender_UE4/GameImage.png?raw=true;" alt="Bob Ross with Paints"></p></img> 
-      </div><!--input-->
-      
-        <div class="input3"><!--input-->
-         <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Blender_UE4/StripedShip.png?raw=true;" alt="Bob Ross with Paints"></p></img>
-        </div><!--input-->
-      
-      <div class="input3"> 
-         <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Blender_UE4/H_Select.png?raw=true;" alt="Bob Ross with Paints"></p></img>
+    </div>
+    <div class="col-md-6 mt-5 mt-md-0">
+      <div class="skill-item mb-4">
+        <h3 class="fs-6">HTML</h3>
+        <div class="progress" style="height: 5px;">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 85%;" 
+          aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-      
-      <div class="input3"><!--input-->    
-         <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Blender_UE4/ThornydaleCars.png?raw=true;" alt="Bob Ross with Paints"></p></img>
-        </div><!--input-->
-      </div><!--row1 BUE4-->
-  
-  <!--ROW 2 START ------------------------------------------------>
-      <div class="row"><!--row2 BUE4-->
-        
-        <div class="input3"><!--input-->   
-         <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Logos/EAS_F.png?raw=true;" alt="Bob Ross with Paints"></p></img>     
-         </div><!--input-->
-  
-          <div class="input3">
-         <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Blender_UE4/5.SoccerBalls.png?raw=true;" alt="Bob Ross with Paints"></p></img>
-        </div><!--input--> 
-  
-  <div class="input3"><!--input-->   
-         <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Classroom/Sidescroller_F.PNG?raw=true;" alt="Bob Ross with Paints"></p></img>
-        </div><!--input--> 
-  
-      <div class="input3">
-       <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Blender_UE4/0046.png?raw=true;" alt="Bob Ross with Paints"></p></img>
+      </div>
+      <div class="skill-item mb-4">
+        <h3 class="fs-6">CSS</h3>
+        <div class="progress" style="height: 5px;">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" 
+          aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-  
-  
-      </div><!--row2 BUE4-->
-  
-  <!--ROW 3 START ------------------------------------------------>
-      <!--<h4>Classroom Materials:</h4>-->
-        <div class="row"><!--row3 CM-->
-          <div class="input3"><!--input-->     
-         <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Classroom/Book1_F.png?raw=true;" alt="Bob Ross with Paints"></img></p>
-      </div><!--input-->
-  
-      <div class="input3">      
-         <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Classroom/Book2._Fpng.png?raw=true;" alt="Bob Ross with Paints"></img></p>   
+      </div>
+      <div class="skill-item mb-4">
+        <h3 class="fs-6">JavaScript</h3>
+        <div class="progress" style="height: 5px;">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 75%;" 
+          aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-  
-      <div class="input3">  
-         <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Classroom/Colors_F.PNG?raw=true;" alt="Bob Ross with Paints"></img></p>      
-        </div><!--input-->
-  
-  <div class="input3">
-         <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/WebProjects/BobRossTribute_F.png?raw=true;" alt="Bob Ross with Paints"></img></p> 
-  </div><!--input3-->
-      </div><!--row3 CM-->
-  
-  <!--ROW 4 START ------------------------------------------------>
-  <div class="row"><!--row4 CM-->
-    
-    <!--RPG Example Pic-->
-    <div class="input3">
-      <p><img class="image-portfolio" src="https://github.com/tallenrand/PublicFiles/blob/master/RPG_Example1.PNG?raw=true;" alt="RPG Example"></img></p>
+      </div>
+      <div class="skill-item">
+        <h3 class="fs-6">Bootstrap</h3>
+        <div class="progress" style="height: 5px;">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 65%;" 
+          aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
   </div>
-    
-        <div class="input3"><!--input-->       
-           <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Classroom/Pong_F.png?raw=true;" alt="Bob Ross with Paints"></img></p>     
-         </div><!--input-->
-  
-   <!--Asteroids Example Pic-->
-    <div class="input3">
-      <p><img class="image-portfolio" src="https://github.com/tallenrand/PublicFiles/blob/master/Asteroids_example.PNG?raw=true;" alt="RPG Example"></img></p>
-  </div>
-       
-        <div class="input3"><!--input--> 
-          <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Classroom/RedBall_F.png?raw=true;" alt="Bob Ross with Paints"></img></p>   
-        </div><!--input--> 
-          
-      </div><!--row4 CM-->
-  
-  <!--ROW 5 START ------------------------------------------------>    
-      <!--<h4>Logos:</h4>-->
-        <div class="row"><!--row5 CM-->
-         
-        <!--Blender Ship Game Example-->
-        <div class="input3"><!--input-->      <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/ShipGameExample.png?raw=true;" alt="Bob Ross with Paints"></img></p>   
-        </div><!--input-->  
-          
-        <!--AR Logo Example-->
-        <div class="input3"><!--input-->      <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Logos/AR_House_Black.png?raw=true;" alt="Bob Ross with Paints"></img></p>   
-        </div><!--input-->
-  
-  <!-- Car Game Example-->
-        <div class="input3"><!--input-->      
-          <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/BritCar_Example.PNG?raw=true;" alt="Bob Ross with Paints"></img></p>   
-        </div><!--input-->
-  
-  <!-- Zombie Example-->
-        <div class="input3"><!--input-->      
-          <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Zombie.PNG?raw=true;" alt="Zombie in Blender"></img></p>   
-        </div><!--input-->
-  </div><!--end_row5-->
-  
-  
-  <!--Row 6 Start ----------------------------------------------->
-  
-  <div class="row"><!--Row 6-->
-    
-    <!--ST Thinking Example----------->
-        <div class="input3"><!--input-->
-          <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/STThinking.png?raw=true;" alt="Thinking Guy"></img></p>
-        </div>
-    
-  <!-- TRex Example------>
-        <div class="input3"><!--input-->      
-          <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/TRex.PNG?raw=true;" alt="Trex"></img></p>
-        </div>
-  
-  <!-- Fish Example--->
-        <div class="input3"><!--input-->
-          <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/FishPaint.PNG?raw=true;" alt="Fish Rig"></img></p>
-        </div>
-  
-  <!-- Cars Example---->
-        <div class="input3"><!--input-->
-          <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/0050.png?raw=true;" alt="Cars in the desert"></img></p>
-        </div>
-  
-  <!--Row 7 Start ----------------------------------------------->
-  
-  <div class="row"><!--Row 6-->
-    
-    <!--Stars Example-->
-        <div class="input3"><!--input-->
-          <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/0176.png?raw=true;" alt="Stars"></img></p>
-        </div>
-    
-  <!-- Ship Greenscreen Example-->
-        <div class="input3"><!--input-->      
-          <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/SkunkCityCar.png?raw=true;" alt="Ship_Greenscreen"></img></p>
-        </div>
-  
-  <!-- Ship Composite Example-->
-        <div class="input3"><!--input-->
-          <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Asteroids2.png?raw=true;" alt="Ship Composit"></img></p>
-        </div>
-  
-  <!-- Fight Example-->
-        <div class="input3"><!--input-->
-          <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/FightGuys!.png?raw=true;" alt="Fight Guys"></img></p>
-        </div>
-  </div><!--End Row 6-->
-  
-  <!--Row 8 Start ----------------------------------------------->
-  
-  <div class="row"><!--Row 8-->
-    
-    <!--Room Model Example-->
-        <div class="input3"><!--input-->
-          <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/ShipGame.PNG?raw=true;" alt="Room Models"></p></img>
-        </div>
-    
-  <!-- Room Lit Example-->
-        <div class="input3"><!--input-->      
-          <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/Room2.jpg?raw=true;" alt="Room-Lit"></p></img>
-        </div>
-  
-  <!-- News Greenscreen Example-->
-        <div class="input3"><!--input-->
-          <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/VS_Comp_Test.png?raw=true;" alt="News Greenscreen"></p></img>
-        </div>
-  
-  <!-- Water Example-->
-        <div class="input3"><!--input-->
-          <p><img class="image-portfolio"  src="https://github.com/tallenrand/PublicFiles/blob/master/nightwater.png?raw=true;" alt="Water in Blender"></p></img>
-        </div>
-  </div><!--End Row 8-->
-  
-  <!--Row 9 Start ----------------------------------------------->
-  
-  
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  
-  
-  </div><!--Rectangle2-->
-  </div><!--Corrected div; Porfolio and Contact Me no longer over lap-->
-  
-  <div id="contact" style="color:white">
-  </div>
-  
-  <!--Contact Me Page-->
-  <div class="rectangle3"><!--close_rectangle3-->
-    <br> 
-    <h3>--Contact Me--</h3>
-    
-    <div style="text-align:center; width:100%"><!--width-->
-      <div style="width:49%; float:left;"><!--float_l-->
-        <h6 style="text-align:center; margin-top:-20px">--Send me an Email--</h6>
-        <form action="mailto:(noemailyet)" method="post" enctype="text/plain">
-          <div class="email-text">Name:<br><input type="text" name="name"><br></div>
-          <div class="email-text">E-mail:<br><input type="text" name="mail"><br></div>
-          <div class="email-text">Comment:<br><textarea name="comments" cols="35" rows="5"></textarea><br></div>
-          <input type="submit" value="Send">
-          <input type="reset" value="Reset">      
-        </form>    
-      </div><!--close_float_1-->
-  
-    
-    <div style="width:40%; float:right; padding-right:60px; padding-top:0px" padding-bottom="50px">
-      <h9 class="h9">If you'd like to collaborate on a project, request to see my resume, or even just hang out if you happen to be visiting the great state of Arizona, send me an email and I will reply ASAP. (No Spam Please)</h9>
-      <p style="text-align:right;"><img class="image-settings2"  src="https://github.com/tallenrand/PublicFiles/blob/master/H_HornedKnight.jpg?raw=true" style="max-width: 100%; height: auto;" alt="Bob Ross with Paints"></p></img>
-      </div><!--close_f-right-->   
-    </div><!--close width-->
-  </div><!--close_rectangle3-->
-  
-  
-  
-  
-  <!--About this Page-->
-    <div class="rectangle4"><!--rec4-->
-      <div style="text-align:center; width:100%"><!--width-->
-      <div style="width:50%; float:left; margin-top:40px"><!--float_l-->
-        <h10 style="text-align:center">--About this Page--</h10><br>
-        <br><br>
-        <h11>Made by Tallen Rand</h11><br>
-        <h11>Copyright 2017</h11>
-      </div><!--close_float_1-->
-  
-    
-    <div style="width:50%; float:right; margin-top:40px">    
-        <h10 style="text-align:center">--Around the Web--</h10><br>
-   
-      <!--Social Media BUTTONS-->
-      <div class="row"><!--row-->
-         <div class="input-c"><!--input-->
-         <div style="margin: 40px 134px 50px 20px"><!--col-xs-20-->
-          <button class="btn btn-block btn-lg btn-primary btn-default hbutton-width2" onClick="window.open('https://www.linkedin.com/in/tallen-rand')"/><i class="fa fa-linkedin" style="font-size:24px"></i></button>
-           </div><!--col-xs-20-->
-          </div><!--input-->
-      
-      
-         <div class="input-c"><!--input-->
-           <div style="margin: 40px 20px 50px 20px"><!--col-xs-20--> 
-             <button class="btn btn-block btn-lg btn-primary btn-default hbutton-width2" onClick="window.open('https://github.com/tallenrand')"/>
-             <i class="fa fa-github" style="font-size:24px"/></i></button>
-           </div><!--col-xs-20-->
-          </div><!--input-->
-      
-         <div class="input-c"><!--input-->
-        <div style="margin: 40px 20px 50px 20px"><!--col-xs-20-->
-        <button class="btn btn-block btn-lg btn btn-primary btn-default hbutton-width2" onClick="window.open('https://www.freecodecamp.com/tallenrand')"/><i class="fa fa-free-code-camp" style="font-size:24px"></i></button>
-          </div><!--col-xs-20-->
-          </div><!--input-->
-      
-      </div><!--close_f-right-->   
-      </div><!--close width-->    
-    </div><!--close_rec4-->
-  
-      </div><!--close rectangle-->
-    </div><!--container fluid-->
-  </body>
-  
-  
-    
+</section>
+<!-- about section end -->
 
-<script>
- 
-</script>
+<!-- services section start -->
+<section class="services py-5" id="services">
+  <div class="container-lg py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h2 class="fw-bold mb-5">What I Do</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-item shadow-sm p-4 rounded bg-white">
+          <div class="icon my-3 text-danger fs-2">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="fs-5 py-2">Web Development</h3>
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="service-item shadow-sm p-4 rounded bg-white">
+            <div class="icon my-3 text-danger fs-2">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 class="fs-5 py-2">Creative Design</h3>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="service-item shadow-sm p-4 rounded bg-white">
+              <div class="icon my-3 text-danger fs-2">
+                <i class="fas fa-image"></i>
+              </div>
+              <h3 class="fs-5 py-2">Photoshop</h3>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur.</p>
+              </div>
+            </div>
+      </div>
+    </div>
+</section>
+<!-- services section end -->
 
+<!-- portfolio section start -->
+<section class="portfolio bg-white py-5" id="portfolio">
+  <div class="container-lg py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h2 class="fw-bold mb-5">Latest Work</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="img/portfolio/1.jpg" class="w-100 img-thumbnail" alt="portfolio item">
+          <h3 class="text-capitalize fs-5 my-2">team section</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="img/portfolio/2.jpg" class="w-100 img-thumbnail" alt="portfolio item">
+          <h3 class="text-capitalize fs-5 my-2">app landing page</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="img/portfolio/3.jpg" class="w-100 img-thumbnail" alt="portfolio item">
+          <h3 class="text-capitalize fs-5 my-2">creative team selection</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="img/portfolio/4.jpg" class="w-100 img-thumbnail" alt="portfolio item">
+          <h3 class="text-capitalize fs-5 my-2">toggle pricing table</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="img/portfolio/5.jpg" class="w-100 img-thumbnail" alt="portfolio item">
+          <h3 class="text-capitalize fs-5 my-2">bootstrap 5 image gallery</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="img/portfolio/6.jpg" class="w-100 img-thumbnail" alt="portfolio item">
+          <h3 class="text-capitalize fs-5 my-2">filterable image gallery</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- portfolio section end -->
+
+<!-- freelancer available section start -->
+<section class="freelancer-available py-5 bg-danger">
+  <div class="container-lg">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <p class="text-light fs-5">Do you have any projects?</p>
+        <h2 class="fs-1 text-white mb-4">I'm available for hire.</h2>
+        <a href="#contact" class="btn btn-outline-light">Hire Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- freelancer available section end -->
+
+<!-- testimonials section start -->
+<section class="testimonials py-5" id="testimonials">
+  <div class="container-lg py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h2 class="fw-bold mb-5">Testimonials</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-xl-7">
+          <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carousel1" data-bs-slide-to="0" class="active bg-danger" aria-current="true" aria-label="Slide 1"></button>
+              <li data-bs-target="#carousel1" data-bs-slide-to="1" class="bg-danger" aria-label="Slide 2"></button>
+              <li data-bs-target="#carousel1" data-bs-slide-to="2" class="bg-danger" aria-label="Slide 3"></button>
+              </ol>
+          <div class="carousel-inner">
+          <!-- testimonial item start -->
+          <div class="testi-item carousel-item active bg-white shadow-sm rounded p-4 mb-5">
+            <div class="testi-author-info d-flex align-items-center">
+              <img src="img/testimonial/1.jpg" class="img-thumbnail rounded-circle" alt="author img">
+              <div class="author ms-3">
+                <h3 class="fs-6 mb-1">Raj Himachal</h3>
+                <p class="text-muted m-0">SEO Manager</p>
+              </div>
+            </div>
+            <p class="text-muted mt-3">Lorem ipsum dolor sit amet</p>
+            <div class="ratings text-danger">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <!-- testimonial item end-->
+          <!-- testimonial item start -->
+          <div class="testi-item carousel-item bg-white shadow-sm rounded p-4 mb-5">
+            <div class="testi-author-info d-flex align-items-center">
+              <img src="img/testimonial/2.jpg" class="img-thumbnail rounded-circle" alt="author img">
+              <div class="author ms-3">
+                <h3 class="fs-6 mb-1">Raj Himachal</h3>
+                <p class="text-muted m-0">SEO Manager</p>
+              </div>
+            </div>
+            <p class="text-muted mt-3">Lorem ipsum dolor sit amet</p>
+            <div class="ratings text-danger">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <!-- testimonial item end-->
+          <!-- testimonial item start -->
+          <div class="testi-item carousel-item bg-white shadow-sm rounded p-4 mb-5">
+            <div class="testi-author-info d-flex align-items-center">
+              <img src="img/testimonial/3.jpg" class="img-thumbnail rounded-circle" alt="author img">
+              <div class="author ms-3">
+                <h3 class="fs-6 mb-1">Raj Himachal</h3>
+                <p class="text-muted m-0">SEO Manager</p>
+              </div>
+            </div>
+            <p class="text-muted mt-3">Lorem ipsum dolor sit amet</p>
+            <div class="ratings text-danger">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <!-- testimonial item end-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- testimonials section end -->
+
+<!-- contact section start -->
+<section class="contact py-5" id="contact">
+  <div class="container-lg py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h2 class="fw-bold mb-5">Contact Me</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="contact-item d-flex mb-3">
+          <div class="icon fs-4 text-danger">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="text ms-3">
+            <h3 class="fs-5">Email</h3>
+            <p class="text-muted">example@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-item d-flex mb-3">
+          <div class="icon fs-4 text-danger">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="text ms-3">
+            <h3 class="fs-5">Phone</h3>
+            <p class="text-muted">867-5309</p>
+          </div>
+        </div>
+        <div class="contact-item d-flex">
+          <div class="icon fs-4 text-danger">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="text ms-3">
+            <h3 class="fs-5">Visit Office</h3>
+            <p class="text-muted">101 Street, Arizona</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="contact-form">
+          <form>
+            <div class="row">
+              <div class="col-lg-6 mb-4">
+                <input type="text" placeholder="Your Name" class="form-control form-control-lg fs-6 border-0 shadow-sm">
+              </div>
+              <div class="col-lg-6 mb-4">
+                <input type="text" placeholder="Your Email" class="form-control form-control-lg fs-6 border-0 shadow-sm">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 mb-4">
+                <input type="text" placeholder="Subject" class="form-control form-control-lg fs-6 border-0 shadow-sm">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 mb-4">
+                <textarea rows="5" placeholder="Your Message" class="form-control form-control-lg fs-6 border-0 shadow-sm"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <button type="submit" class="btn btn-danger px-3">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- contact section end -->
+
+<!-- footer start -->
+<footer class="footer border-top py-4">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="m-0 text-center text-muted">&copy; 2022 Rand</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- footer end -->
+
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
