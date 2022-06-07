@@ -1,0 +1,83 @@
+    .zoomleft {      
+    -webkit-transition: all 0.35s ease-in-out;    
+    -moz-transition: all 0.35s ease-in-out;    
+    transition: all 0.35s ease-in-out;     
+    cursor: -webkit-zoom-in;      
+    cursor: -moz-zoom-in;      
+    cursor: zoom-in;
+    }
+    
+    .zoomcenter {      
+    -webkit-transition: all 0.35s ease-in-out;    
+    -moz-transition: all 0.35s ease-in-out;    
+    transition: all 0.35s ease-in-out;     
+    cursor: -webkit-zoom-in;      
+    cursor: -moz-zoom-in;      
+    cursor: zoom-in;
+    }   
+
+    .zoomright {      
+    -webkit-transition: all 0.35s ease-in-out;    
+    -moz-transition: all 0.35s ease-in-out;    
+    transition: all 0.35s ease-in-out;     
+    cursor: -webkit-zoom-in;      
+    cursor: -moz-zoom-in;      
+    cursor: zoom-in;
+    }   
+    
+    .zoomleft:hover,  
+    .zoomleft:active,   
+    .zoomleft:focus {
+    /**adjust scale to desired size, 
+    add browser prefixes**/
+    -ms-transform: scale(2.5);    
+    -moz-transform: scale(2.5);  
+    -webkit-transform: scale(2.5);  
+    -o-transform: scale(2.5);  
+    transform: scale(2.5);    
+    position:relative;      
+    z-index: 100;  
+    margin-left: 15vw;       
+    }
+
+    .zoomcenter:hover,  
+    .zoomcenter:active,   
+    .zoomcenter:focus {
+    /**adjust scale to desired size, 
+    add browser prefixes**/
+    -ms-transform: scale(2.5);    
+    -moz-transform: scale(2.5);  
+    -webkit-transform: scale(2.5);  
+    -o-transform: scale(2.5);  
+    transform: scale(2.5);    
+    position:relative;      
+    z-index:100;  
+    }
+
+    .zoomright:hover,  
+    .zoomright:active,   
+    .zoomright:focus {
+    /**adjust scale to desired size, 
+    add browser prefixes**/
+    -ms-transform: scale(2.5);    
+    -moz-transform: scale(2.5);  
+    -webkit-transform: scale(2.5);  
+    -o-transform: scale(2.5);  
+    transform: scale(2.5);    
+    position:relative;      
+    z-index:100;        
+    margin-left: -15vw;
+    }
+    
+    /**To keep upscaled images visible on mobile, 
+    increase left & right margins a bit**/  
+    @media only screen and (max-width: 768px) {   
+    .portfolio-item {      
+    margin-left: 15vw;       
+    margin-right: 15vw;
+    }
+    
+    /**TIP: Easy escape for touch screens,
+    give gallery's parent container a cursor: pointer.**/
+    .DivName {cursor: pointer}
+    }
