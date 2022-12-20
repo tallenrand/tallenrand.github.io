@@ -1,0 +1,37 @@
+#outerBox {
+  border: 2pt dashed black;
+  width: 400px;
+  height: 100%;
+  margin: auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 10px 10px 5px gray;
+}
+h4 {
+  /* 3. Paste your font from Google Fonts here */  
+  text-align: center;
+  font-size: 18px;
+}
+li span {
+  display: block;
+  font-size: 24px;
+  text-align: center;
+}
+li {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+  list-style-type: none;
+  font-size: 14px;
+}
+ul {
+  text-align: center;
+}
+#directions {
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+}
