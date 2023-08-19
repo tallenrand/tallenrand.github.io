@@ -4,7 +4,7 @@ const second = 1000,
  day = hour * 24;
 
 /* 4. Change the date in the green text below */
-var countDown = new Date("Aug 30, 2023 00:00:00").getTime(),
+var countDown = new Date("Aug 28, 2023 00:00:00").getTime(),
   x = setInterval(function() {
     
       var now = new Date().getTime(),
